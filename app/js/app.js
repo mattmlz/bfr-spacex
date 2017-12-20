@@ -48,9 +48,9 @@ $start.addEventListener('click', () => {
   scrollItHorizontal($sections[1])
 })
 
-$bts.addEventListener('click', () => {
-  scrollItHorizontal($sections[0])
-})
+//$bts.addEventListener('click', () => {
+//  scrollItHorizontal($sections[0])
+//})
 
 //calcul of actual time
 const actualTime = () => {
