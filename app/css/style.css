@@ -1,0 +1,471 @@
+body
+{
+  background:#F1F1F1;
+  overflow: hidden;
+}
+body button
+{
+ cursor: pointer;
+}
+
+header.header
+{
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'FuturaStdHeavy';
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  z-index: 99;
+}
+
+header.header .spaceLogo
+{
+  margin-right: 5px;
+}
+
+header.header .xLogo
+{
+  color: #5a8de2;
+}
+
+.timeline .section
+{
+  width: 100vw;
+  height: 100vh;
+}
+
+.timeline .section .verticalTxt
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Asimov';
+  font-size: 0.6rem;
+}
+
+.timeline .section .verticalTxt p
+{
+  margin: auto;
+}
+
+.timeline .section0 .title
+{
+  position: absolute;
+  top: 10%;
+  left: 34%;
+  width: 60vw;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  text-transform: uppercase;
+  font-family: 'FuturaStdBold';
+  font-size: 4rem;
+  line-height: 5rem;
+  color: #5a8de2;
+  z-index: 99;
+}
+
+.timeline .section0 .title p
+{
+  margin: 0;
+}
+
+.timeline .section0 .crossCorner
+{
+  position: absolute;
+  width: 5%;
+  height: 5%;
+  font-family: 'FuturaStdMedium';
+  font-size: 3rem;
+  color: #f1f1f1;
+  z-index: 99;
+}
+
+.timeline .section0 .crossCorner.topLeftCorner
+{
+  top: 5%;
+  left: 3%;
+}
+.timeline .section0 .crossCorner.botLeftCorner
+{
+  bottom: 5%;
+  left: 3%;
+}
+.timeline .section0 .crossCorner.topRightCorner
+{
+  top: 5%;
+  right: 3%;
+  color: #000;
+}
+.timeline .section0 .crossCorner.botRightCorner
+{
+  bottom: 5%;
+  right: 3%;
+}
+
+.timeline .section0 .leftSide
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 41vw;
+  height: 100vh;
+}
+
+.timeline .section0 .leftSide .bfrVertical
+{
+  position: absolute;
+  top: calc(50% - 20vh/2);
+  left: 10%;
+  height: 20vh;
+  color: #f1f1f1;
+  z-index: 99;
+}
+
+.timeline .section0 .leftSide img
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.timeline .section0 .rightSide
+{
+  position: absolute;
+  top: 0;
+  left: 41vw;
+  width: 59vw;
+  height: 100%;
+}
+
+.timeline .section0 .rightSide .whitePart
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 59vw;
+  height: 67vh;
+}
+
+.timeline .section0 .rightSide .whitePart .bfrTitle
+{
+  position: absolute;
+  top: 70%;
+  left: 2%;
+  font-family: 'FuturaStdHeavy';
+  font-size: 1.5rem;
+}
+
+.timeline .section0 .rightSide .whitePart .description
+{
+  position: absolute;
+  top: 80%;
+  left: calc(50% - 20vw/2);
+  width: 20vw;
+  text-align: center;
+  font-family: 'FuturaStdMedium';
+  font-size: 0.9rem;
+}
+
+.timeline .section0 .rightSide .whitePart .spaceXVertical
+{
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  height: 30vh;
+}
+
+.timeline .section0 .rightSide button.start
+{
+  position: absolute;
+  top: calc(67vh - 8vh/2);
+  left: calc(50% - 16vw/2);
+  height: 8vh;
+  width: 16vw;
+  background: #5a8de2;
+  border: 0;
+  font-family: 'Asimov';
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  z-index: 99;
+}
+
+.timeline .section0 .rightSide button.start .btnCorner
+{
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-style: solid;
+}
+
+.timeline .section0 .rightSide button.start .btnCorner.blackCorner
+{
+  top: 0;
+  left: 0;
+  border-top-width: 0.3rem;
+  border-left-width: 0.3rem;
+  border-color: #000;
+}
+.timeline .section0 .rightSide button.start .btnCorner.whiteCorner
+{
+  bottom: 0;
+  right: 0;
+  border-right-width: 0.3rem;
+  border-bottom-width: 0.3rem;
+  border-color: #f1f1f1;
+}
+
+.timeline .section0 .rightSide .blackPart
+{
+  position: absolute;
+  top: 67vh;
+  left: 0;
+  width: 100%;
+  height: 33vh;
+  background: #000;
+}
+
+.timeline .section0 .rightSide .blackPart .city
+{
+  position: absolute;
+  height: 30%;
+  width: 10%;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline .section0 .rightSide .blackPart .city p
+{
+  font-family: 'MontserratBold';
+  font-size: 0.9rem;
+  color: #f1f1f1;
+  margin-bottom: 1.25rem;
+}
+
+.timeline .section0 .rightSide .blackPart .city .circle
+{
+  position: relative;
+  border-radius: 50%;
+  border: solid 0.1rem #f1f1f1;
+  height: 4vh;
+  width: 4vh;
+}
+
+.timeline .section0 .rightSide .blackPart .city .circle .dot
+{
+  position: absolute;
+  top: calc(50% - 0.9vh/2);
+  left: calc(50% - 0.9vh/2);
+  border-radius: 50%;
+  background: #f1f1f1;
+  height: 0.9vh;
+  width: 0.9vh;
+}
+
+.timeline .section0 .rightSide .blackPart .city.newyork
+{
+  left: 15%;
+}
+
+.timeline .section0 .rightSide .blackPart .city.newyork .circle .dot
+{
+  background: #5a8de2;
+}
+
+.timeline .section0 .rightSide .blackPart .city.shanghai
+{
+  left: 75%;
+}
+
+
+.timeline .section0 .rightSide .blackPart .line
+{
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 50%/2);
+  height: 30%;
+  width: 50%;
+  border-top-width: 0.1rem;
+  border-color: #f1f1f1;
+  border-style: solid;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline .section0 .rightSide .blackPart .line p
+{
+  font-family: 'MontserratBold';
+  font-size: 0.8rem;
+  color: #f1f1f1;
+}
+
+.timeline .section0 .rightSide .blackPart .follow
+{
+  position: absolute;
+  bottom: 4%;
+  left: 1%;
+  height: 8%;
+  width: 10%;
+  border: solid 0.1rem #f1f1f1;
+  font-family: 'MontserratBold';
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline .section.verticalSection
+{
+  position: absolute;
+  background: #999;
+  left: 100%;
+}
+
+.timeline .section.section1 { top: 0; }
+.timeline .section.section2 { top: 100%;}
+.timeline .section.section3 { top: 200%; }
+
+.timeline .section.verticalSection p
+{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin: 0 auto;
+}
+
+.timeline .section.verticalSection .bts
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+}
+
+.timeline .section.verticalSection .np
+{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin: 0 auto;
+}
+
+.timeline .section .header2 {
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+  font-family: 'FuturaStdHeavy';
+  font-size: 20px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.timeline .header2 .spaceLogo {
+  margin-right: 5px;
+}
+
+.timeline .header2 .xLogo {
+  margin-left: 5px;
+  color: #5a8de2;
+}
+
+.timeline .section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.timeline .section.section1 .contentSection1 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline .section.section1 .bgVideo video{
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100vw;
+  width: auto;
+  height: 100vh;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%) scale(1.2, 1.6);
+}
+
+.timeline .section.section1 .contentSection1 .verticalTxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Asimov';
+  font-size: 0.6rem;
+  color: #FFFFFF;
+}
+
+.timeline .section.section1 .contentSection1 .verticalTxt p {
+  margin: auto;
+}
+
+.timeline .section.section1 .contentSection1 .spaceXVertical {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  height: 30vh;
+}
+
+.timeline .section.section1 .contentSection1 .actualTime {
+  font-family: 'MontserratBold';
+  font-size: 122px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transform: translateY(-50%);
+}
+
+.timeline .section.section1 .contentSection1 button.impendingDeparture {
+  position: absolute;
+  top: calc(60vh - 6vh/2);
+  left: calc(50% - 20vw/2);
+  width: 20vw;
+  height: 6vh;
+  background: #FFFFFF;
+  border: 0;
+  font-family: 'Asimov';
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #000000;
+  z-index: 2;
+}
+
+.timeline .section.section1 .contentSection1 .rightPart {
+  position: fixed;
+  top: 10%;
+  right: 15%;
+  height: 100vh;
+}
+
+.timeline .section.section1 .contentSection1 .rightPart .camembert {
+  display: flex;
+  flex-direction: row;
+  font-family: 'MontserratBold';
+  font-size: 32px;
+  color: #FFFFFF;
+}
