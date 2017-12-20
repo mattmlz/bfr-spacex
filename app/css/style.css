@@ -348,7 +348,8 @@ header.header .xLogo
 }
 */
 
-.timeline .section.section1 .header2 {
+.timeline .section.section1 .header2 
+{
   background: transparent;
   display: flex;
   flex-direction: row;
@@ -363,16 +364,19 @@ header.header .xLogo
   text-transform: uppercase;
 }
 
-.timeline .section.section1 .header2 .spaceLogo {
+.timeline .section.section1 .header2 .spaceLogo 
+{
   margin-right: 5px;
 }
 
-.timeline .section.section1 .header2 .xLogo {
+.timeline .section.section1 .header2 .xLogo 
+{
   margin-left: 5px;
   color: #5a8de2;
 }
 
-.timeline .section.section1 .contentSection1 {
+.timeline .section.section1 .contentSection1 
+{
   position: relative;
   height: 100vh;
   display: flex;
@@ -380,21 +384,23 @@ header.header .xLogo
   justify-content: center;
 }
 
-.timeline .section.section1 .bgVideo video{
+.timeline .section.section1 .bgVideo video
+{
   position: absolute;
   top: 50vh;
-  left: 50vw;
+  left: 50vh;
   min-width: 100%;
   min-height: 100%;
   max-width: 100vw;
   width: auto;
   height: 100vh;
   z-index: 1;
-  transform: translateX(-47.25%) translateY(-50%) scale(1.2, 1.6);
+  /* transform: translateX(-47.25%) translateY(-50%) scale(1.2, 1.6); */
 /*  transform: translateY(-50%) scale(1.2, 1.6);*/
 }
 
-.timeline .section.section1 .contentSection1 .verticalTxt {
+.timeline .section.section1 .contentSection1 .verticalTxt 
+{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -404,21 +410,27 @@ header.header .xLogo
   color: #FFFFFF;
 }
 
-.timeline .section.section1 .contentSection1 .verticalTxt p {
+.timeline .section.section1 .contentSection1 .verticalTxt p 
+{
   margin: auto;
 }
 
-.timeline .section.section1 .contentSection1 .spaceXVertical {
+.timeline .section.section1 .contentSection1 .spaceXVertical 
+{
   position: absolute;
-  top: 30%;
-  left: 5%;
+  top: calc(50vh - 30vh/2);
+  left: 1vw;
   height: 30vh;
   width: 10vw;
   z-index: 2;
 }
 
-.timeline .section.section1 .contentSection1 .actualTime {
-  font-family: 'MontserratBold';
+.timeline .section.section1 .contentSection1 .actualTime 
+{
+  position: absolute;
+  top: 40vh;
+  left: calc(50% - 500px/2);
+  font-family: 'OpenSansExtraBold';
   font-size: 122px;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -426,7 +438,8 @@ header.header .xLogo
   z-index: 2;
 }
 
-.timeline .section.section1 .contentSection1 button.impendingDeparture {
+.timeline .section.section1 .contentSection1 button.impendingDeparture 
+{
   position: absolute;
   top: calc(60vh - 6vh/2);
   left: calc(50% - 20vw/2);
@@ -441,14 +454,16 @@ header.header .xLogo
   z-index: 2;
 }
 
-.timeline .section.section1 .contentSection1 .rightPart {
-  position: fixed;
-  top: 10%;
-  right: 15%;
+.timeline .section.section1 .contentSection1 .rightPart 
+{
+  position: relative;
+  top: 10vh;
+  right: -80vh;
   height: 100vh;
 }
 
-.timeline .section.section1 .contentSection1 .rightPart .camembert {
+.timeline .section.section1 .contentSection1 .rightPart .camembert 
+{
   display: flex;
   flex-direction: row;
   font-family: 'MontserratBold';
