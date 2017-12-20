@@ -7,6 +7,7 @@
 None yet
 
 ## Running
+ - Click [here](http://matthieutoussaint.fr)
  - Download the .zip, unzip it and double click on index.html file
 
 ## Features:
