@@ -463,12 +463,13 @@ header.header .xLogo
   top: 10vh;
   right: -30vw;
   height: 100vh;
+  z-index: 100;
 }
 
 .timeline .section.section1 .contentSection1 .rightPart .camembert 
 {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   font-family: 'MontserratBold';
   font-size: 32px;
   color: #FFFFFF;
