@@ -348,6 +348,10 @@ header.header .xLogo
 }
 */
 
+.timeline .section.section1 {
+  overflow: hidden;
+}
+
 .timeline .section.section1 .header2 
 {
   background: transparent;
@@ -395,8 +399,7 @@ header.header .xLogo
   width: auto;
   height: 100vh;
   z-index: 1;
-  /* transform: translateX(-47.25%) translateY(-50%) scale(1.2, 1.6); */
-/*  transform: translateY(-50%) scale(1.2, 1.6);*/
+  transform: translateX(-50%) translateY(-50%) scale(1.6, 1.6);
 }
 
 .timeline .section.section1 .contentSection1 .verticalTxt 
