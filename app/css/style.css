@@ -362,7 +362,7 @@ header.header .xLogo
   margin: 0 auto;
 }
 
-.timeline .section .header2 {
+.timeline .section.section1 .header2 {
   background: transparent;
   display: flex;
   flex-direction: row;
@@ -377,18 +377,13 @@ header.header .xLogo
   text-transform: uppercase;
 }
 
-.timeline .header2 .spaceLogo {
+.timeline .section.section1 .header2 .spaceLogo {
   margin-right: 5px;
 }
 
-.timeline .header2 .xLogo {
+.timeline .section.section1 .header2 .xLogo {
   margin-left: 5px;
   color: #5a8de2;
-}
-
-.timeline .section {
-  width: 100vw;
-  height: 100vh;
 }
 
 .timeline .section.section1 .contentSection1 {
