@@ -961,9 +961,11 @@ body button
 
 .timeline .section.section5 .arrivalTime
 {
+  width: 30vw;
+  height: 20vh;
   position: absolute;
   top: 60vh;
-  left: calc(50% - 500px/2);
+  left: calc(50% - 30vw / 2);
   display: flex;
   flex-direction: column;
   color: #FFFFFF;
@@ -975,4 +977,29 @@ body button
   font-family: 'MontserratExtraBold';
   font-size: 1.2em;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.timeline .section.section5 .arrivalTime .hour
+{
+  font-family: 'OpenSansBold';
+  font-size: 1.4em;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline .section.section5 .arrivalTime .withBfr,
+.timeline .section.section5 .arrivalTime .withPlane
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.timeline .section.section5 .arrivalTime .withBfr img,
+.timeline .section.section5 .arrivalTime .withPlane img
+{
+  margin: 15px;
 }
