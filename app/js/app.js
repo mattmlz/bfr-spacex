@@ -82,7 +82,7 @@ const actualTime = () =>
   }
 
   result = +hours + ':' + mins + ':' + secs
-  document.querySelector('.actualTime').innerHTML = result;
+  document.querySelector('.actualTime1').innerHTML = result;
   setTimeout('actualTime();', '1000');
   return true;
 }
@@ -112,6 +112,31 @@ const actualTime3 = () => {
   return true;
 }
 actualTime3()
+
+//calcul of time +30 mins
+const actualTime5 = () => {
+  date = new Date
+  hours = date.getHours()
+  if (hours < 10) {
+    hours = "0" + hours
+  }
+
+  mins = date.getMinutes() + 30
+  if (mins < 10) {
+    mins = "0" + mins
+  }
+
+  secs = date.getSeconds()
+  if (secs < 10) {
+    secs = "0" + secs
+  }
+
+  result = +hours + ':' + mins + ':' + secs
+  document.querySelector('.actualTime5').innerHTML = result;
+  setTimeout('actualTime3();', '1000');
+  return true;
+}
+actualTime5()
 
 /******************
        Line
