@@ -184,7 +184,7 @@ body button
   transform: translateX(-50%) translateY(-50%) scale(1.6, 1.6);
 }
 
-.timeline .section.section3 .actualTime
+.timeline .section .actualTime
 {
   position: absolute;
   top: 40vh;
@@ -552,19 +552,6 @@ body button
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.timeline .section.section1 .contentSection1 .actualTime 
-{
-  position: absolute;
-  top: 40vh;
-  left: calc(50% - 500px/2);
-  font-family: 'OpenSansExtraBold';
-  font-size: 122px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  transform: translateY(-50%);
-  z-index: 2;
 }
 
 .timeline .section.section1 .contentSection1 button.impendingDeparture 
