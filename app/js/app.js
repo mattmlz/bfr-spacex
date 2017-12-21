@@ -6,6 +6,10 @@ const $shanghai = $sections[0].querySelector('.shanghai')
 const $s0line = $sections[0].querySelector('.line')
 const $s2topline = $sections[2].querySelector('.topLine')
 const $s2botline = $sections[2].querySelector('.botLine')
+const $s2indications = $sections[2].querySelector('.scrollStep')
+const $s4topline = $sections[4].querySelector('.topLine')
+const $s4botline = $sections[4].querySelector('.botLine')
+const $s4indications = $sections[4].querySelector('.scrollStep')
 
 /******************
 
@@ -81,12 +85,27 @@ const actualTime = () =>
 }
 actualTime()
 
-const s2LineGrowth = (mousePos) =>
+const lineGrowth = (pos) =>
 {
-  if(mousePos < $sections[2].offsetTop)
+  if(pos == 'translate3d(0px, 0%, 0px)' || pos == '')
   {
     $s2topline.classList.add('grow')
+    $s2indications.classList.add('appear')
     $s2botline.classList.add('grow')
+  }
+  else if(pos == 'translate3d(0px, -100%, 0px)')
+  {
+    //animations section3
+  }
+  else if(pos == 'translate3d(0px, -200%, 0px)')
+  {
+    $s4topline.classList.add('grow')
+    $s4indications.classList.add('appear')
+    $s4botline.classList.add('grow')
+  }
+  else if(pos == 'translate3d(0px, -300%, 0px)')
+  {
+    //animations section5
   }
 }
 
@@ -104,13 +123,13 @@ $start.addEventListener('click', () =>
   $start.classList.add('close')
   $shanghai.classList.add('disappear')
   $s0line.classList.add('grow')
-  setTimeout(scrollItHorizontal, 3500, $sections[1])
-//  scrollItHorizontal($sections[1])
+  setTimeout(scrollItHorizontal, 3500, $sections[1]) //good version
+//  scrollItHorizontal($sections[1]) //dev version
 })
 
 document.addEventListener('mousewheel', (event) =>
 {
-  setTimeout(s2LineGrowth, 500, event.clientY) 
+  setTimeout(lineGrowth, 500, $timeline.style.transform) 
 })
 
 /******************
