@@ -112,6 +112,25 @@ body button
   justify-content: center;
 }
 
+.timeline .section .step .circle
+{
+  position: relative;
+  border-radius: 50%;
+  border: solid 0.1rem #f1f1f1;
+  height: 4vh;
+  width: 4vh;
+}
+
+.timeline .section .step .dot
+{
+  position: absolute;
+  top: calc(50% - 0.9vh/2);
+  left: calc(50% - 0.9vh/2);
+  border-radius: 50%;
+  background: #f1f1f1;
+  height: 0.9vh;
+  width: 0.9vh;
+}
 
 /************************
 
@@ -340,26 +359,6 @@ header.header .xLogo
   margin-bottom: 1.25rem;
 }
 
-.timeline .section0 .rightSide .blackPart .city .circle
-{
-  position: relative;
-  border-radius: 50%;
-  border: solid 0.1rem #f1f1f1;
-  height: 4vh;
-  width: 4vh;
-}
-
-.timeline .section0 .rightSide .blackPart .city .circle .dot
-{
-  position: absolute;
-  top: calc(50% - 0.9vh/2);
-  left: calc(50% - 0.9vh/2);
-  border-radius: 50%;
-  background: #f1f1f1;
-  height: 0.9vh;
-  width: 0.9vh;
-}
-
 .timeline .section0 .rightSide .blackPart .city.newyork
 {
   left: 15%;
@@ -522,7 +521,7 @@ header.header .xLogo
   color: #FFFFFF;
 }
 
-.timeline .section.section.section1 .contentSection1 .stepsline
+.timeline .section.section1 .contentSection1 .stepsline
 {
   position: absolute;
   top: 67vh;
@@ -532,7 +531,7 @@ header.header .xLogo
   z-index: 100;
 }
 
-.timeline .section.section.section1 .contentSection1 .stepsline .step
+.timeline .section.section1 .contentSection1 .stepsline .step
 {
   position: absolute;
   height: 30%;
@@ -544,7 +543,7 @@ header.header .xLogo
   align-items: center;
 }
 
-.timeline .section.section.section1 .contentSection1 .stepsline .step p
+.timeline .section.section1 .contentSection1 .stepsline .step p
 {
   font-family: 'MontserratBold';
   font-size: 0.9rem;
@@ -552,47 +551,27 @@ header.header .xLogo
   margin-bottom: 1.25rem;
 }
 
-.timeline .section.section.section1 .contentSection1 .stepsline .step .circle
-{
-  position: relative;
-  border-radius: 50%;
-  border: solid 0.1rem #f1f1f1;
-  height: 4vh;
-  width: 4vh;
-}
-
-.timeline .section.section.section1 .contentSection1 .stepsline .step .dot
-{
-  position: absolute;
-  top: calc(50% - 0.9vh/2);
-  left: calc(50% - 0.9vh/2);
-  border-radius: 50%;
-  background: #f1f1f1;
-  height: 0.9vh;
-  width: 0.9vh;
-}
-
-.timeline .section.section.section1 .contentSection1 .stepsline .step.boarding
+.timeline .section.section1 .contentSection1 .stepsline .step.boarding
 {
   left: calc(5% - 10%/2);
 }
 
-.timeline .section.section.section1 .contentSection1 .stepsline .step.boarding .circle .dot
+.timeline .section.section1 .contentSection1 .stepsline .step.boarding .circle .dot
 {
   background: #5a8de2;
 }
 
-.timeline .section.section.section1 .contentSection1 .stepsline .step.takePlace
+.timeline .section.section1 .contentSection1 .stepsline .step.takePlace
 {
   left: calc(20% - 10%/2);
 }
 
-.timeline .section.section.section1 .contentSection1 .stepsline .step.discover
+.timeline .section.section1 .contentSection1 .stepsline .step.discover
 {
   left: calc(50% - 20%/2);
 }
 
-.timeline .section.section.section1 .contentSection1 .stepsline .line
+.timeline .section.section1 .contentSection1 .stepsline .line
 {
   position: absolute;
   top: 50%;
@@ -607,7 +586,7 @@ header.header .xLogo
   align-items: center;
 }
 
-.timeline .section.section.section1 .contentSection1 .stepsline .line p
+.timeline .section.section1 .contentSection1 .stepsline .line p
 {
   font-family: 'MontserratBold';
   font-size: 0.8rem;
