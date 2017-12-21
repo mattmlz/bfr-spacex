@@ -141,7 +141,31 @@ const $accelerationCanvas = $acceleration.querySelector('.fillRound')
 const $speedCanvas = $speed.querySelector('.fillRound')
 const $altitudeCanvas = $altitude.querySelector('.fillRound')
 
-console.log($temperatureCanvas)
-console.log($accelerationCanvas)
-console.log($speedCanvas)
-console.log($altitudeCanvas)
+const temperatureContext = $temperatureCanvas.getContext('2d')
+const accelerationContext = $accelerationCanvas.getContext('2d')
+const speedContext = $speedCanvas.getContext('2d')
+const altitudeContext = $altitudeCanvas.getContext('2d')
+
+temperatureContext.beginPath()
+temperatureContext.strokeStyle = 'white'
+temperatureContext.lineWidth = 4
+temperatureContext.arc(50, 50, 40, 2 * Math.PI, false)
+temperatureContext.stroke()
+
+accelerationContext.beginPath()
+accelerationContext.strokeStyle = 'white'
+accelerationContext.lineWidth = 4
+accelerationContext.arc(50, 50, 40, 2 * Math.PI, false)
+accelerationContext.stroke()
+
+speedContext.beginPath()
+speedContext.strokeStyle = 'white'
+speedContext.lineWidth = 4
+speedContext.arc(50, 50, 40, 2 * Math.PI, false)
+speedContext.stroke()
+
+altitudeContext.beginPath()
+altitudeContext.strokeStyle = 'white'
+altitudeContext.lineWidth = 4
+altitudeContext.arc(50, 50, 40, 2 * Math.PI, false)
+altitudeContext.stroke()
