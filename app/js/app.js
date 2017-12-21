@@ -87,7 +87,7 @@ $start.addEventListener('click', () => {
   $start.classList.add('close')
   $shanghai.classList.add('disappear')
   $s0line.classList.add('grow')
-  /* setTimeout(scrollItHorizontal, 3500, $sections[1]) */
+  setTimeout(scrollItHorizontal, 3500, $sections[1])
 })
 
 /******************

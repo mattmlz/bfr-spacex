@@ -691,6 +691,26 @@ header.header .xLogo
 
 /************************
 
+    Section3
+
+**************************/
+
+.timeline .section.section3 .bgVideo video
+{
+  position: absolute;
+  top: 50vh;
+  left: 50vh;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100vw;
+  width: auto;
+  height: 100vh;
+  z-index: 1;
+  transform: translateX(-50%) translateY(-50%) scale(1.6, 1.6);
+}
+
+/************************
+
     Section4
 
 **************************/
