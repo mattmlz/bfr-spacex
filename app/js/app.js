@@ -1,9 +1,9 @@
 // Variables
 const $timeline = document.querySelector('.timeline')
-const $sections = document.querySelectorAll('.section')
-const $start = document.querySelector('.start')
-const $bts = document.querySelector('.bts')
-
+const $sections = $timeline.querySelectorAll('.section')
+const $start = $sections[0].querySelector('.start')
+const $shanghai = $sections[0].querySelector('.shanghai')
+const $s0line = $sections[0].querySelector('.line')
 
 /******************
 
@@ -84,10 +84,11 @@ actualTime()
 $start.addEventListener('click', () => {
   $timeline.classList.add('scrollable')
   scrollablePage()
-  scrollItHorizontal($sections[1])
+  $start.classList.add('close')
+  $shanghai.classList.add('disappear')
+  $s0line.classList.add('grow')
+  setTimeout(scrollItHorizontal, 3500, $sections[1])
 })
-
-
 
 /******************
 
