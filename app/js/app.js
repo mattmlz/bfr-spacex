@@ -96,6 +96,7 @@ $start.addEventListener('click', () => {
   
 ******************/
 
+//Section 1
 const $camembert = document.querySelector('.camembertCanvas')
 const camembertContext = $camembert.getContext('2d')
 
@@ -104,3 +105,19 @@ camembertContext.strokeStyle = 'white'
 camembertContext.beginPath()
 camembertContext.arc(50, 50, 25, 0, 2 * Math.PI, false)
 camembertContext.stroke()
+
+//Section 3
+const $temperature = document.querySelector('.temperature')
+const $acceleration = document.querySelector('.acceleration')
+const $speed = document.querySelector('.speed')
+const $altitude = document.querySelector('.altitude')
+
+const $temperatureCanvas = $temperature.querySelector('.fillRound')
+const $accelerationCanvas = $acceleration.querySelector('.fillRound')
+const $speedCanvas = $speed.querySelector('.fillRound')
+const $altitudeCanvas = $altitude.querySelector('.fillRound')
+
+console.log($temperatureCanvas)
+console.log($accelerationCanvas)
+console.log($speedCanvas)
+console.log($altitudeCanvas)

@@ -781,6 +781,11 @@ header.header .xLogo
   border-radius: 50px;
 }
 
+.timeline .section.section3 .flightInformations .round canvas.fillRound
+{
+  position: absolute;
+}
+
 /************************
 
     Section4
