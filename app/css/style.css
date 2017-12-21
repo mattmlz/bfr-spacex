@@ -7,17 +7,22 @@
 body
 {
   background:#F1F1F1;
-  overflow: hidden;
 }
 body button
 {
  cursor: pointer;
 }
 
+.timeline
+{
+/*  overflow: hidden;*/
+}
+
 .timeline .section
 {
   width: 100vw;
   height: 100vh;
+  overflow: hidden
 }
 
 .timeline .section.verticalSection
@@ -27,7 +32,7 @@ body button
   left: 100%;
 }
 
-.timeline .section.section1 { top: 0; overflow: hidden; }
+.timeline .section.section1 { top: 0; }
 .timeline .section.section2 { top: 100%;}
 .timeline .section.section3 { top: 200%; }
 .timeline .section.section4 { top: 300%; }
@@ -93,23 +98,27 @@ body button
   text-transform: uppercase;
 }
 
+
+.timeline .section .scrollStep
+{
+  position: absolute;
+  bottom: 10vh;
+  left: calc(50vw - 15vw/2);
+  height: 15vh;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
 .timeline .section .stepsFont
 {
   font-family: 'MontserratExtraBold';
   font-size: 0.8vw;
   text-transform: uppercase;
-}
-
-.timeline .section .indications
-{
-  position: absolute;
-  bottom: 10vh;
-  left: calc(50vw - 15vw/2);
-  height: 5vh;
-  width: 15vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 1vh;
 }
 
 .timeline .section .step .circle
@@ -131,6 +140,20 @@ body button
   height: 0.9vh;
   width: 0.9vh;
 }
+
+.timeline .section .verticalLine
+{
+  position: absolute;
+  left: 49.9%;
+  width: 2%;
+  height: 0.1%;
+  border-left-width: 0.1rem;
+  border-style: solid;
+  transform-origin: 0 0;
+  will-change: transform;
+  z-index: 98;
+}
+
 
 /************************
 
@@ -631,6 +654,20 @@ header.header .xLogo
     Section2
 
 **************************/
+.timeline .section2 .verticalLine
+{
+  border-color: #000;
+}
+.timeline .section2 .verticalLine.topLine
+{
+  top: 0;
+}
+
+.timeline .section2 .topLine.grow
+{
+  transition: transform 1.5s ease;
+  transform: scaleY(175);
+}
 
 .timeline .section2 .txt
 {
@@ -657,7 +694,7 @@ header.header .xLogo
 
 .timeline .section2 .txt .title p+p 
 {
-  margin-left: 7vw;
+  margin-left: 13vw;
 }
 
 .timeline .section2 .txt .description
@@ -672,22 +709,26 @@ header.header .xLogo
   color: #000;
 }
 
-/*
-.timeline .section2 .indications
+.timeline .section2 .step .circle
 {
-  position: absolute;
-  bottom: 10vh;
-  left: calc(50vw - 15vw/2);
-  height: 5vh;
-  width: 15vw;
-  font-family: 'MontserratExtraBold';
-  font-size: 0.8vw;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-color: #000;
 }
-*/
+
+.timeline .section2 .step .dot
+{
+  background: #dbb7a0;
+}
+
+.timeline .section2 .verticalLine.botLine
+{
+  bottom: 16vh;
+}
+
+.timeline .section2 .verticalLine.botLine.grow
+{
+  transition: transform 1.5s ease 1s;
+  transform: scaleY(170)
+}
 
 /************************
 
