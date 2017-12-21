@@ -734,6 +734,12 @@ header.header .xLogo
   left: 0;
   z-index: 100;
   color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.timeline .section.section3 .flightInformations td {
+  text-align: center;
+  vertical-align: center;
 }
 
 .timeline .section.section3 .flightInformations .text 
