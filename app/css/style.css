@@ -695,6 +695,10 @@ header.header .xLogo
 
 **************************/
 
+.timeline .section.section3 {
+  overflow: hidden;
+}
+
 .timeline .section.section3 .bgVideo video
 {
   position: absolute;
