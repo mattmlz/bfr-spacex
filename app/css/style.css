@@ -28,7 +28,7 @@ body button
 }
 
 .timeline .section.section1 { top: 0; }
-.timeline .section.section2 { top: 100%;}
+.timeline .section.section2 { top: 100%; }
 .timeline .section.section3 { top: 200%; }
 .timeline .section.section4 { top: 300%; }
 .timeline .section.section5 { top: 400%; }
@@ -79,14 +79,34 @@ body button
   display: flex;
   flex-direction: row;
   font-size: 1vw;
-  margin-right: 2vw;
+  margin-left: -0.5vw;
 }
 
 .timeline .section .stepTitle .stepNumber .number
 {
+  margin-left: 1.5vw;
   margin-right: 0.5vw;
+  display: flex;
+  flex-direction: row;
 }
 
+.timeline .section .stepTitle .stepNumber .number .stepLine
+{
+  height: 2vh;
+  width: 0.1vw;
+  margin-top: 0.8vh;
+  border-style: solid;
+  border-color: #000;
+  border-bottom-width: 0.05vw;
+  transform-origin: 100% 100%;
+  will-change: transform;
+}
+
+.timeline .section .stepTitle .stepNumber .number .stepLine.grow
+{
+  transition: transform 0.5s ease 1s;
+  transform: scaleX(20)
+}
 
 .timeline .section .stepTitle .titleName
 {

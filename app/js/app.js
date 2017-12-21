@@ -9,6 +9,7 @@ const $s2botline = $sections[2].querySelector('.botLine')
 const $s2indications = $sections[2].querySelector('.scrollStep')
 const $s4topline = $sections[4].querySelector('.topLine')
 const $s4botline = $sections[4].querySelector('.botLine')
+const $s4stepLine = $sections[4].querySelector('.stepLine')
 const $s4indications = $sections[4].querySelector('.scrollStep')
 
 /******************
@@ -100,6 +101,7 @@ const lineGrowth = (pos) =>
   else if(pos == 'translate3d(0px, -200%, 0px)')
   {
     $s4topline.classList.add('grow')
+    $s4stepLine.classList.add('grow')
     $s4indications.classList.add('appear')
     $s4botline.classList.add('grow')
   }
