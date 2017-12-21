@@ -72,6 +72,7 @@ body button
   left: 10vw;
   font-family: 'FuturaStdBold';
   line-height: 2.5vw;
+  z-index: 100;
 }
 
 .timeline .section .stepTitle .stepNumber
