@@ -369,6 +369,8 @@ header.header .xLogo
 .timeline .section.section1 { top: 0; overflow: hidden; }
 .timeline .section.section2 { top: 100%;}
 .timeline .section.section3 { top: 200%; }
+.timeline .section.section4 { top: 300%; }
+.timeline .section.section5 { top: 400%; }
 
 
 /************************
