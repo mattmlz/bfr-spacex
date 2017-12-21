@@ -10,6 +10,10 @@ const $s2indications = $sections[2].querySelector('.scrollStep')
 const $s4topline = $sections[4].querySelector('.topLine')
 const $s4botline = $sections[4].querySelector('.botLine')
 const $s4stepLine = $sections[4].querySelector('.stepLine')
+const $s4legendLine1_vertical = $sections[4].querySelector('.legendLine1_vertical')
+const $s4legendLine1_horizontal = $sections[4].querySelector('.legendLine1_horizontal')
+const $s4legendLine2_vertical = $sections[4].querySelector('.legendLine2_vertical')
+const $s4legendLine2_horizontal = $sections[4].querySelector('.legendLine2_horizontal')
 const $s4indications = $sections[4].querySelector('.scrollStep')
 
 /******************
@@ -118,6 +122,10 @@ const lineGrowth = (pos) =>
   {
     $s4topline.classList.add('grow')
     $s4stepLine.classList.add('grow')
+    $s4legendLine1_vertical.classList.add('grow')
+    $s4legendLine1_horizontal.classList.add('grow')
+    $s4legendLine2_vertical.classList.add('grow')
+    $s4legendLine2_horizontal.classList.add('grow')
     $s4indications.classList.add('appear')
     $s4botline.classList.add('grow')
   }
@@ -140,8 +148,8 @@ $start.addEventListener('click', () =>
   $start.classList.add('close')
   $shanghai.classList.add('disappear')
   $s0line.classList.add('grow')
-//  setTimeout(scrollItHorizontal, 3500, $sections[1]) //good version
-  scrollItHorizontal($sections[1]) //dev version
+  setTimeout(scrollItHorizontal, 2500, $sections[1]) //good version
+//  scrollItHorizontal($sections[1]) //dev version
 })
 
 document.addEventListener('mousewheel', (event) =>
