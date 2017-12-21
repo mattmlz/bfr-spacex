@@ -4,6 +4,8 @@ const $sections = $timeline.querySelectorAll('.section')
 const $start = $sections[0].querySelector('.start')
 const $shanghai = $sections[0].querySelector('.shanghai')
 const $s0line = $sections[0].querySelector('.line')
+const $s2topline = $sections[2].querySelector('.topLine')
+const $s2botline = $sections[2].querySelector('.botLine')
 
 /******************
 
@@ -11,7 +13,8 @@ const $s0line = $sections[0].querySelector('.line')
   
 ******************/
 
-const scrollItHorizontal = (element) => {
+const scrollItHorizontal = (element) => 
+{
   document.body.scrollTo({
     'behavior': 'smooth',
     'left': element.offsetLeft,
@@ -19,7 +22,8 @@ const scrollItHorizontal = (element) => {
   })
 }
 
-const scrollItVertical = (element) => {
+const scrollItVertical = (element) => 
+{
   document.body.scrollTo({
     'behavior': 'smooth',
     'left': element.offsetLeft,
@@ -27,7 +31,8 @@ const scrollItVertical = (element) => {
   })
 }
 
-const scrollablePage = () => {
+const scrollablePage = () => 
+{
   if ($timeline.classList.contains('scrollable')) {
     onepagescroll('.timeline', {
       //child elements selector. use if you don't want to use section for page.
@@ -51,7 +56,8 @@ const scrollablePage = () => {
 }
 
 //calcul of actual time
-const actualTime = () => {
+const actualTime = () => 
+{
   date = new Date
   hours = date.getHours()
   if (hours < 10) {
@@ -75,19 +81,36 @@ const actualTime = () => {
 }
 actualTime()
 
+const s2LineGrowth = (mousePos) =>
+{
+  if(mousePos < $sections[2].offsetTop)
+  {
+    $s2topline.classList.add('grow')
+    $s2botline.classList.add('grow')
+  }
+}
+
+
 /******************
 
   Events
   
 ******************/
 
-$start.addEventListener('click', () => {
+$start.addEventListener('click', () => 
+{
   $timeline.classList.add('scrollable')
   scrollablePage()
   $start.classList.add('close')
   $shanghai.classList.add('disappear')
   $s0line.classList.add('grow')
   setTimeout(scrollItHorizontal, 3500, $sections[1])
+//  scrollItHorizontal($sections[1])
+})
+
+document.addEventListener('mousewheel', (event) =>
+{
+  setTimeout(s2LineGrowth, 500, event.clientY) 
 })
 
 /******************
