@@ -384,6 +384,7 @@ body button
   width: 1vw;
   height: 1vw;
   border-style: solid;
+  will-change: transform;
 }
 
 .timeline .section0 .rightSide button.start .btnCorner.blackCorner
@@ -393,6 +394,7 @@ body button
   border-top-width: 0.3vw;
   border-left-width: 0.3vw;
   border-color: #000;
+  transform-origin: 0 0;
 }
 .timeline .section0 .rightSide button.start .btnCorner.whiteCorner
 {
@@ -401,6 +403,19 @@ body button
   border-right-width: 0.3vw;
   border-bottom-width: 0.3vw;
   border-color: #f1f1f1;
+  transform-origin: 100% 100%;
+}
+
+.timeline .section0 .rightSide button.start:hover 
+{
+  transition: color 0.3s ease;
+  color: #000;
+}
+
+.timeline .section0 .rightSide button.start:hover .btnCorner
+{
+  transition: transform 0.3s ease;
+  transform: scaleX(1.2) scaleY(1.2);
 }
 
 .timeline .section0 .rightSide .blackPart
