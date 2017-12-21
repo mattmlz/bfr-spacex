@@ -1,3 +1,9 @@
+/************************
+
+    General
+
+**************************/
+
 body
 {
   background:#F1F1F1;
@@ -49,10 +55,27 @@ header.header .xLogo
   font-size: 0.6rem;
 }
 
+.timeline .section .verticalTxt.spaceXVertical 
+{
+  position: absolute;
+  top: calc(50vh - 30vh/2);
+  left: 1vw;
+  height: 30vh;
+  width: 10vw;
+  color: #f1f1f1;
+  z-index: 99;
+}
+
 .timeline .section .verticalTxt p
 {
   margin: auto;
 }
+
+/************************
+
+    Section0
+
+**************************/
 
 .timeline .section0 .title
 {
@@ -118,6 +141,7 @@ header.header .xLogo
   height: 100vh;
 }
 
+/*
 .timeline .section0 .leftSide .bfrVertical
 {
   position: absolute;
@@ -127,6 +151,7 @@ header.header .xLogo
   color: #f1f1f1;
   z-index: 99;
 }
+*/
 
 .timeline .section0 .leftSide img
 {
@@ -173,12 +198,12 @@ header.header .xLogo
   font-size: 0.9rem;
 }
 
-.timeline .section0 .rightSide .whitePart .spaceXVertical
+.timeline .section0 .rightSide .whitePart .bfrVertical
 {
   position: absolute;
   top: 50%;
   right: 10%;
-  height: 30vh;
+  height: 20vh;
 }
 
 .timeline .section0 .rightSide button.start
@@ -327,26 +352,30 @@ header.header .xLogo
   align-items: center;
 }
 
+/************************
+
+    Section positionment
+    (put into general)
+
+**************************/
+
 .timeline .section.verticalSection
 {
   position: absolute;
-  background: #999;
+  background: #f1f1f1;
   left: 100%;
 }
 
-.timeline .section.section1 { top: 0; }
+.timeline .section.section1 { top: 0; overflow: hidden; }
 .timeline .section.section2 { top: 100%;}
 .timeline .section.section3 { top: 200%; }
 
-/*
-.timeline .section.verticalSection .bts
-{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: 0 auto;
-}
-*/
+
+/************************
+
+    Section1
+
+**************************/
 
 .timeline .section.section1 .header2 
 {
@@ -396,9 +425,9 @@ header.header .xLogo
   height: 100vh;
   z-index: 1;
   /* transform: translateX(-47.25%) translateY(-50%) scale(1.2, 1.6); */
-/*  transform: translateY(-50%) scale(1.2, 1.6);*/
 }
 
+/*
 .timeline .section.section1 .contentSection1 .verticalTxt 
 {
   display: flex;
@@ -424,6 +453,7 @@ header.header .xLogo
   width: 10vw;
   z-index: 2;
 }
+*/
 
 .timeline .section.section1 .contentSection1 .actualTime 
 {
@@ -469,4 +499,65 @@ header.header .xLogo
   font-family: 'MontserratBold';
   font-size: 32px;
   color: #FFFFFF;
+}
+
+/************************
+
+    Section2
+
+**************************/
+
+.timeline .section2 .txt
+{
+  position: absolute;
+  top: 17vh;
+  left: 17vw;
+  height: 50vh;
+  width: 50vw;
+}
+
+.timeline .section2 .txt .title
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-family: 'FuturaStdBold';
+  text-transform: uppercase;
+  font-size: 3.5vw;
+  line-height: 4.75vw;
+  color: #5a8de2;
+  margin-bottom: 10vh;
+}
+
+.timeline .section2 .txt .title p+p 
+{
+  margin-left: 7vw;
+}
+
+.timeline .section2 .txt .description
+{
+  font-family: 'FuturaStdMedium';
+  font-size: 1.2vw;
+  line-height: 1.8vw;
+}
+
+.timeline .section2 .verticalTxt.spaceXVertical
+{
+  color: #000;
+}
+
+.timeline .section2 .indications
+{
+  position: absolute;
+  bottom: 10vh;
+  left: calc(50vw - 15vw/2);
+  height: 5vh;
+  width: 15vw;
+  font-family: 'MontserratExtraBold';
+  font-size: 0.8vw;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
