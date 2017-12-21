@@ -302,6 +302,13 @@ header.header .xLogo
   text-transform: uppercase;
   color: #f1f1f1;
   z-index: 99;
+  will-change: transform;
+}
+
+.timeline .section0 .rightSide button.start.close
+{
+  transition: transform 0.3s linear;
+  transform: scaleY(0);
 }
 
 .timeline .section0 .rightSide button.start .btnCorner
@@ -372,6 +379,13 @@ header.header .xLogo
 .timeline .section0 .rightSide .blackPart .city.shanghai
 {
   left: 75%;
+  will-change: opacity;
+}
+
+.timeline .section0 .rightSide .blackPart .city.shanghai.disappear
+{
+  transition: opacity 1s ease 1s;
+  opacity: 0;
 }
 
 
@@ -380,18 +394,28 @@ header.header .xLogo
   position: absolute;
   top: 50%;
   left: calc(50% - 50%/2);
-  height: 30%;
+  height: 5%;
   width: 50%;
   border-top-width: 0.1rem;
   border-color: #f1f1f1;
   border-style: solid;
-  display : flex;
-  justify-content: center;
-  align-items: center;
+  transform-origin: 0 0;
+  will-change: transform;
 }
 
-.timeline .section0 .rightSide .blackPart .line p
+.timeline .section0 .rightSide .blackPart .line.grow
 {
+  transition: transform 1.5s ease 2s;
+  transform: scaleX(1.5);
+}
+
+.timeline .section0 .rightSide .blackPart .travelTime
+{
+  position: absolute;
+  top: 60%;
+  left: calc(50% - 10%/2);
+  height: 10%;
+  width: 10%;
   font-family: 'MontserratBold';
   font-size: 0.8rem;
   color: #f1f1f1;
@@ -400,7 +424,7 @@ header.header .xLogo
 .timeline .section0 .rightSide .blackPart .follow
 {
   position: absolute;
-  bottom: 4%;
+  bottom: 7%;
   left: 1%;
   height: 8%;
   width: 10%;
@@ -409,9 +433,18 @@ header.header .xLogo
   font-size: 0.6rem;
   text-transform: uppercase;
   color: #f1f1f1;
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+}
+
+.timeline .section0 .rightSide .blackPart .follow:hover{
+  transition: background 0.3s ease;
+  transition: color 0.3s ease;
+  background: #f1f1f1;
+  color: #000;
 }
 
 /************************
