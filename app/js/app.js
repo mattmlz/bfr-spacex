@@ -1,7 +1,15 @@
+// Variables
 const $timeline = document.querySelector('.timeline')
 const $sections = document.querySelectorAll('.section')
 const $start = document.querySelector('.start')
 const $bts = document.querySelector('.bts')
+
+
+/******************
+
+  Functions
+  
+******************/
 
 const scrollItHorizontal = (element) => {
   document.body.scrollTo({
@@ -42,16 +50,6 @@ const scrollablePage = () => {
   }
 }
 
-$start.addEventListener('click', () => {
-  $timeline.classList.add('scrollable')
-  scrollablePage()
-  scrollItHorizontal($sections[1])
-})
-
-//$bts.addEventListener('click', () => {
-//  scrollItHorizontal($sections[0])
-//})
-
 //calcul of actual time
 const actualTime = () => {
   date = new Date
@@ -77,9 +75,26 @@ const actualTime = () => {
 }
 actualTime()
 
-/*********
- * CANVAS *
- *********/
+/******************
+
+  Events
+  
+******************/
+
+$start.addEventListener('click', () => {
+  $timeline.classList.add('scrollable')
+  scrollablePage()
+  scrollItHorizontal($sections[1])
+})
+
+
+
+/******************
+
+  Canvas
+  
+******************/
+
 const $camembert = document.querySelector('.camembertCanvas')
 const camembertContext = $camembert.getContext('2d')
 
