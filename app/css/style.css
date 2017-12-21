@@ -958,3 +958,21 @@ body button
 {
   margin-left: 100px;
 }
+
+.timeline .section.section5 .arrivalTime
+{
+  position: absolute;
+  top: 60vh;
+  left: calc(50% - 500px/2);
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  z-index: 100;
+}
+
+.timeline .section.section5 .arrivalTime .text 
+{
+  font-family: 'MontserratExtraBold';
+  font-size: 1.2em;
+  text-transform: uppercase;
+}

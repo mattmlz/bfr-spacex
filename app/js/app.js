@@ -142,12 +142,12 @@ actualTime5()
 //calcul of flight time with plane
 const actualTimePlane = () => {
   date = new Date
-  hours = date.getHours()
+  hours = date.getHours() + 15
   if (hours < 10) {
     hours = "0" + hours
   }
 
-  mins = date.getMinutes() + 30
+  mins = date.getMinutes()
   if (mins < 10) {
     mins = "0" + mins
   }
