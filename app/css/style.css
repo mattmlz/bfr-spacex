@@ -474,3 +474,97 @@ header.header .xLogo
   font-size: 32px;
   color: #FFFFFF;
 }
+
+.timeline .section.section.section1 .contentSection1 .stepsline
+{
+  position: absolute;
+  top: 67vh;
+  left: 0;
+  width: 100%;
+  height: 33vh;
+  background: #000;
+  z-index: 100;
+}
+
+.timeline .section.section.section1 .contentSection1 .stepsline .step
+{
+  position: absolute;
+  height: 30%;
+  width: 10%;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline .section.section.section1 .contentSection1 .stepsline .step p
+{
+  font-family: 'MontserratBold';
+  font-size: 0.9rem;
+  color: #f1f1f1;
+  margin-bottom: 1.25rem;
+}
+
+.timeline .section.section.section1 .contentSection1 .stepsline .step .circle
+{
+  position: relative;
+  border-radius: 50%;
+  border: solid 0.1rem #f1f1f1;
+  height: 4vh;
+  width: 4vh;
+}
+
+.timeline .section.section.section1 .contentSection1 .stepsline .step .dot
+{
+  position: absolute;
+  top: calc(50% - 0.9vh/2);
+  left: calc(50% - 0.9vh/2);
+  border-radius: 50%;
+  background: #f1f1f1;
+  height: 0.9vh;
+  width: 0.9vh;
+}
+
+.timeline .section.section.section1 .contentSection1 .stepsline .step.boarding
+{
+  left: 5%;
+}
+
+.timeline .section.section.section1 .contentSection1 .stepsline .step.boarding .circle .dot
+{
+  background: #5a8de2;
+}
+
+.timeline .section.section.section1 .contentSection1 .stepsline .step.takePlace
+{
+  left: 20%;
+}
+
+.timeline .section.section.section1 .contentSection1 .stepsline .step.scrollToDiscover
+{
+  left: 50%;
+}
+
+
+.timeline .section.section.section1 .contentSection1 .stepsline .line
+{
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 50%/2);
+  height: 30%;
+  width: 50%;
+  border-top-width: 0.1rem;
+  border-color: #f1f1f1;
+  border-style: solid;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline .section.section.section1 .contentSection1 .stepsline .line p
+{
+  font-family: 'MontserratBold';
+  font-size: 0.8rem;
+  color: #f1f1f1;
+}
