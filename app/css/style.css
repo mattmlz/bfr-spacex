@@ -13,11 +13,6 @@ body button
  cursor: pointer;
 }
 
-.timeline
-{
-/*  overflow: hidden;*/
-}
-
 .timeline .section
 {
   width: 100vw;
@@ -89,13 +84,21 @@ body button
 
 .timeline .section .stepTitle .stepNumber .number
 {
-  margin-right: 1vw;
+  margin-right: 0.5vw;
 }
+
 
 .timeline .section .stepTitle .titleName
 {
-  font-size: 3vw;
+  font-size: 3.5vw;
   text-transform: uppercase;
+  margin-top: -2.3vw;
+}
+
+.timeline .section .stepTitle .titleName.letterShadow
+{
+  margin-top: 0;
+  margin-left: -0.35vw;
 }
 
 
@@ -152,7 +155,7 @@ body button
 .timeline .section .verticalLine
 {
   position: absolute;
-  left: 49.9%;
+  left: 49.95%;
   width: 2%;
   height: 0.1%;
   border-left-width: 0.1rem;
@@ -173,7 +176,8 @@ body button
 {
   position: absolute;
   top: 4%;
-  left: 65%;
+  left: calc(70.5vw - 10vw/2);
+  width: 10vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -186,7 +190,7 @@ body button
 
 .timeline .section0 .header .spaceLogo
 {
-  margin-right: 5px;
+  margin-right: 0.5vw;
 }
 
 .timeline .section0 .header .xLogo
@@ -205,7 +209,7 @@ body button
   align-items: flex-start;
   text-transform: uppercase;
   font-family: 'FuturaStdBold';
-  font-size: 3.5vw;
+  font-size: 3.5vw; 
   line-height: 4vw;
   color: #5a8de2;
   z-index: 99;
@@ -213,7 +217,15 @@ body button
 
 .timeline .section0 .title p
 {
-  margin: 0;
+  margin-top: -4vw;
+  margin-left: 0;
+  margin-right: 0;
+}
+.timeline .section0 .title .letterShadow
+{
+  margin-top: 0;
+  margin-left: -0.3vw;
+  color: #f1f1f1;
 }
 
 .timeline .section0 .crossCorner
@@ -774,10 +786,15 @@ body button
   color: #d53d3d;
 }
 
+.timeline .section .stepTitle .titleName.letterShadow
+{
+  color: #d53d3d;
+}
+
 .timeline .section4 .whitePart .description
 {
   position: absolute;
-  top: calc(50% - 30vh/2);
+  top: calc(45% - 30vh/2);
   left: calc(50% - 40vw/2);
   height: 50vh;
   width: 40vw;
@@ -817,6 +834,11 @@ body button
   width: 30vw;
 }
 
+.timeline .section4 .step.scrollStep
+{
+  bottom: 5vh;  
+}
+
 .timeline .section4 .step .circle
 {
   border-color: #000;
@@ -829,7 +851,7 @@ body button
 
 .timeline .section4 .verticalLine.botLine
 {
-  bottom: 16vh;
+  bottom: 11.5vh;
 }
 
 .timeline .section4 .verticalLine.botLine.grow
