@@ -528,7 +528,7 @@ header.header .xLogo
 
 .timeline .section.section.section1 .contentSection1 .stepsline .step.boarding
 {
-  left: 5%;
+  left: calc(5% - 10%/2);
 }
 
 .timeline .section.section.section1 .contentSection1 .stepsline .step.boarding .circle .dot
@@ -538,14 +538,13 @@ header.header .xLogo
 
 .timeline .section.section.section1 .contentSection1 .stepsline .step.takePlace
 {
-  left: 20%;
+  left: calc(20% - 10%/2);
 }
 
-.timeline .section.section.section1 .contentSection1 .stepsline .step.scrollToDiscover
+.timeline .section.section.section1 .contentSection1 .stepsline .step.discover
 {
-  left: 40%;
+  left: calc(50% - 20%/2);
 }
-
 
 .timeline .section.section.section1 .contentSection1 .stepsline .line
 {
