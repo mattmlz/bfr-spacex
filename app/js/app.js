@@ -59,6 +59,9 @@ const scrollablePage = () =>
   }
 }
 
+/******************
+Actual time functions
+******************/
 //calcul of actual time
 const actualTime = () => 
 {
@@ -85,6 +88,34 @@ const actualTime = () =>
 }
 actualTime()
 
+//calcul of time +3 mins
+const actualTime3 = () => {
+  date = new Date
+  hours = date.getHours()
+  if (hours < 10) {
+    hours = "0" + hours
+  }
+
+  mins = date.getMinutes() + 3
+  if (mins < 10) {
+    mins = "0" + mins
+  }
+
+  secs = date.getSeconds()
+  if (secs < 10) {
+    secs = "0" + secs
+  }
+
+  result = +hours + ':' + mins + ':' + secs
+  document.querySelector('.actualTime3').innerHTML = result;
+  setTimeout('actualTime3();', '1000');
+  return true;
+}
+actualTime3()
+
+/******************
+       Line
+******************/
 const lineGrowth = (pos) =>
 {
   if(pos == 'translate3d(0px, 0%, 0px)' || pos == '')
@@ -109,10 +140,9 @@ const lineGrowth = (pos) =>
   }
 }
 
-
 /******************
 
-  Events
+     Events
   
 ******************/
 
@@ -138,6 +168,7 @@ document.addEventListener('mousewheel', (event) =>
   
 ******************/
 
+//Section 1
 const $camembert = document.querySelector('.camembertCanvas')
 const camembertContext = $camembert.getContext('2d')
 
@@ -146,3 +177,43 @@ camembertContext.strokeStyle = 'white'
 camembertContext.beginPath()
 camembertContext.arc(50, 50, 25, 0, 2 * Math.PI, false)
 camembertContext.stroke()
+
+//Section 3
+//Set variables
+const $temperature = document.querySelector('.temperature')
+const $acceleration = document.querySelector('.acceleration')
+const $speed = document.querySelector('.speed')
+const $altitude = document.querySelector('.altitude')
+const $temperatureCanvas = $temperature.querySelector('.fillRound')
+const $accelerationCanvas = $acceleration.querySelector('.fillRound')
+const $speedCanvas = $speed.querySelector('.fillRound')
+const $altitudeCanvas = $altitude.querySelector('.fillRound')
+//Get context of canvas
+const temperatureContext = $temperatureCanvas.getContext('2d')
+const accelerationContext = $accelerationCanvas.getContext('2d')
+const speedContext = $speedCanvas.getContext('2d')
+const altitudeContext = $altitudeCanvas.getContext('2d')
+//Round of temperature
+temperatureContext.beginPath()
+temperatureContext.strokeStyle = 'white'
+temperatureContext.lineWidth = 4
+temperatureContext.arc(50, 50, 40, 2 * Math.PI, false)
+temperatureContext.stroke()
+//Round of acceleration
+accelerationContext.beginPath()
+accelerationContext.strokeStyle = 'white'
+accelerationContext.lineWidth = 4
+accelerationContext.arc(50, 50, 40, 2 * Math.PI, false)
+accelerationContext.stroke()
+//Round of speed
+speedContext.beginPath()
+speedContext.strokeStyle = 'white'
+speedContext.lineWidth = 4
+speedContext.arc(50, 50, 40, 2 * Math.PI, false)
+speedContext.stroke()
+//Round of altitude
+altitudeContext.beginPath()
+altitudeContext.strokeStyle = 'white'
+altitudeContext.lineWidth = 4
+altitudeContext.arc(50, 50, 40, 2 * Math.PI, false)
+altitudeContext.stroke()

@@ -77,6 +77,7 @@ body button
   left: 10vw;
   font-family: 'FuturaStdBold';
   line-height: 2.5vw;
+  z-index: 100;
 }
 
 .timeline .section .stepTitle .stepNumber
@@ -98,6 +99,13 @@ body button
   text-transform: uppercase;
 }
 
+.timeline .section .stepsFont
+{
+  font-family: 'MontserratExtraBold';
+  font-size: 0.8vw;
+  text-transform: uppercase;
+  z-index: 100;
+}
 
 .timeline .section .scrollStep
 {
@@ -732,6 +740,117 @@ body button
 {
   transition: transform 1.5s ease 1s;
   transform: scaleY(170)
+}
+
+/************************
+
+    Section3
+
+**************************/
+
+.timeline .section.section3 {
+  overflow: hidden;
+}
+
+.timeline .section.section3 .actualTime3
+{
+  position: absolute;
+  top: 40vh;
+  left: calc(50% - 500px/2);
+  font-family: 'OpenSansExtraBold';
+  font-size: 122px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.timeline .section.section3 .bgVideo video
+{
+  position: absolute;
+  top: 50vh;
+  left: 50vh;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100vw;
+  width: auto;
+  height: 100vh;
+  z-index: 1;
+  transform: translateX(-50%) translateY(-50%) scale(1.6, 1.6);
+}
+
+.timeline .section.section3 .stepTitle .stepNumber .number
+{
+  color: #deb9a1;
+}
+
+.timeline .section.section3 .stepsFont
+{
+  color: #FFFFFF;
+}
+
+.timeline .section.section3 .flightInformations 
+{
+  width: 100vw;
+  height: 30%;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  z-index: 100;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.timeline .section.section3 .flightInformations td {
+  text-align: center;
+  vertical-align: center;
+}
+
+.timeline .section.section3 .flightInformations .informations
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline .section.section3 .flightInformations .informations .count,
+.timeline .section.section3 .flightInformations .informations .round
+{
+  margin: 20px;
+}
+.timeline .section.section3 .flightInformations .informations .round { position: relative; }
+
+.timeline .section.section3 .flightInformations .text 
+{
+  font-family: 'FuturaStdBold';
+  font-size: 1.2vw;
+}
+
+.timeline .section.section3 .flightInformations .count 
+{
+  font-family: 'FuturaStdBold';
+  font-size: 3vw;
+}
+
+.timeline .section.section3 .flightInformations .round .unit 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'MontserratBold';
+  font-size: 1.1vw;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+}
+
+.timeline .section.section3 .flightInformations .round canvas.fillRound
+{
+  position: absolute;
+  top: -2vh;
+  left: -35%;
 }
 
 /************************
