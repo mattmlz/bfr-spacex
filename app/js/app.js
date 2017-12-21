@@ -75,6 +75,30 @@ const actualTime = () => {
 }
 actualTime()
 
+//calcul of time +3 mins
+const actualTime3 = () => {
+  date = new Date
+  hours = date.getHours()
+  if (hours < 10) {
+    hours = "0" + hours
+  }
+
+  mins = date.getMinutes() + 3
+  if (mins < 10) {
+    mins = "0" + mins
+  }
+
+  secs = date.getSeconds()
+  if (secs < 10) {
+    secs = "0" + secs
+  }
+
+  result = +hours + ':' + mins + ':' + secs
+  document.querySelector('.actualTime3').innerHTML = result;
+  setTimeout('actualTime3();', '1000');
+  return true;
+}
+actualTime3()
 /******************
 
   Events

@@ -701,6 +701,19 @@ header.header .xLogo
   overflow: hidden;
 }
 
+.timeline .section.section3 .actualTime3
+{
+  position: absolute;
+  top: 40vh;
+  left: calc(50% - 500px/2);
+  font-family: 'OpenSansExtraBold';
+  font-size: 122px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
 .timeline .section.section3 .bgVideo video
 {
   position: absolute;
@@ -765,7 +778,7 @@ header.header .xLogo
 .timeline .section.section3 .flightInformations .count 
 {
   font-family: 'FuturaStdBold';
-  font-size: 5vw;
+  font-size: 3vw;
 }
 
 .timeline .section.section3 .flightInformations .round .unit 
