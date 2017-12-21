@@ -110,7 +110,15 @@ body button
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  will-change: opacity;
   z-index: 99;
+}
+
+.timeline .section .scrollStep.appear
+{
+  transition: opacity 1s ease 1s;
+  opacity: 1;
 }
 
 .timeline .section .stepsFont
@@ -736,6 +744,21 @@ header.header .xLogo
 
 **************************/
 
+.timeline .section4 .verticalLine
+{
+  border-color: #000;
+}
+.timeline .section4 .verticalLine.topLine
+{
+  top: 0;
+}
+
+.timeline .section4 .topLine.grow
+{
+  transition: transform 1.5s ease;
+  transform: scaleY(175);
+}
+
 .timeline .section4 .whitePart
 {
   position: absolute;
@@ -796,4 +819,25 @@ header.header .xLogo
   left: calc(68vw - 20vw/2);
   height: 75vh;
   width: 30vw;
+}
+
+.timeline .section4 .step .circle
+{
+  border-color: #000;
+}
+
+.timeline .section4 .step .dot
+{
+  background: #dbb7a0;
+}
+
+.timeline .section4 .verticalLine.botLine
+{
+  bottom: 16vh;
+}
+
+.timeline .section4 .verticalLine.botLine.grow
+{
+  transition: transform 1.5s ease 1s;
+  transform: scaleY(170)
 }
