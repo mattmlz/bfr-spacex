@@ -14,36 +14,30 @@ body button
  cursor: pointer;
 }
 
-header.header
-{
-  position: fixed;
-  top: 2%;
-  left: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-family: 'FuturaStdHeavy';
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  z-index: 99;
-}
-
-header.header .spaceLogo
-{
-  margin-right: 5px;
-}
-
-header.header .xLogo
-{
-  color: #5a8de2;
-}
-
 .timeline .section
 {
   width: 100vw;
   height: 100vh;
 }
+
+.timeline .section.verticalSection
+{
+  position: absolute;
+  background: #f1f1f1;
+  left: 100%;
+}
+
+.timeline .section.section1 { top: 0; overflow: hidden; }
+.timeline .section.section2 { top: 100%;}
+.timeline .section.section3 { top: 200%; }
+.timeline .section.section4 { top: 300%; }
+.timeline .section.section5 { top: 400%; }
+
+/************************
+
+    Recurrent Elements
+
+**************************/
 
 .timeline .section .verticalTxt
 {
@@ -70,6 +64,87 @@ header.header .xLogo
 {
   margin: auto;
 }
+
+.timeline .section .stepTitle
+{
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  font-family: 'FuturaStdBold';
+  line-height: 2.5vw;
+}
+
+.timeline .section .stepTitle .stepNumber
+{
+  display: flex;
+  flex-direction: row;
+  font-size: 1vw;
+  margin-right: 2vw;
+}
+
+.timeline .section .stepTitle .stepNumber .number
+{
+  margin-right: 1vw;
+}
+
+.timeline .section .stepTitle .titleName
+{
+  font-size: 3vw;
+  text-transform: uppercase;
+}
+
+.timeline .section .stepsFont
+{
+  font-family: 'MontserratExtraBold';
+  font-size: 0.8vw;
+  text-transform: uppercase;
+}
+
+.timeline .section .indications
+{
+  position: absolute;
+  bottom: 10vh;
+  left: calc(50vw - 15vw/2);
+  height: 5vh;
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/************************
+
+     Header
+
+**************************/
+
+header.header
+{
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'FuturaStdHeavy';
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  z-index: 99;
+}
+
+header.header .spaceLogo
+{
+  margin-right: 5px;
+}
+
+header.header .xLogo
+{
+  color: #5a8de2;
+}
+
+
 
 /************************
 
@@ -140,18 +215,6 @@ header.header .xLogo
   width: 41vw;
   height: 100vh;
 }
-
-/*
-.timeline .section0 .leftSide .bfrVertical
-{
-  position: absolute;
-  top: calc(50% - 20vh/2);
-  left: 10%;
-  height: 20vh;
-  color: #f1f1f1;
-  z-index: 99;
-}
-*/
 
 .timeline .section0 .leftSide img
 {
@@ -354,27 +417,6 @@ header.header .xLogo
 
 /************************
 
-    Section positionment
-    (put into general)
-
-**************************/
-
-.timeline .section.verticalSection
-{
-  position: absolute;
-  background: #f1f1f1;
-  left: 100%;
-}
-
-.timeline .section.section1 { top: 0; overflow: hidden; }
-.timeline .section.section2 { top: 100%;}
-.timeline .section.section3 { top: 200%; }
-.timeline .section.section4 { top: 300%; }
-.timeline .section.section5 { top: 400%; }
-
-
-/************************
-
     Section1
 
 **************************/
@@ -432,34 +474,6 @@ header.header .xLogo
   z-index: 1;
   transform: translateX(-50%) translateY(-50%) scale(1.6, 1.6);
 }
-
-/*
-.timeline .section.section1 .contentSection1 .verticalTxt 
-{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Asimov';
-  font-size: 0.6rem;
-  color: #FFFFFF;
-}
-
-.timeline .section.section1 .contentSection1 .verticalTxt p 
-{
-  margin: auto;
-}
-
-.timeline .section.section1 .contentSection1 .spaceXVertical 
-{
-  position: absolute;
-  top: calc(50vh - 30vh/2);
-  left: 1vw;
-  height: 30vh;
-  width: 10vw;
-  z-index: 2;
-}
-*/
 
 .timeline .section.section1 .contentSection1 .actualTime 
 {
@@ -646,6 +660,7 @@ header.header .xLogo
   color: #000;
 }
 
+/*
 .timeline .section2 .indications
 {
   position: absolute;
@@ -660,4 +675,72 @@ header.header .xLogo
   align-items: center;
   justify-content: center;
 }
+*/
 
+/************************
+
+    Section4
+
+**************************/
+
+.timeline .section4 .whitePart
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 70vw;
+}
+
+.timeline .section4 .whitePart .verticalTxt.spaceXVertical
+{
+  color: #000;
+}
+
+.timeline .section4 .whitePart .stepTitle .stepNumber .number
+{
+  color: #d53d3d;
+}
+
+.timeline .section4 .whitePart .description
+{
+  position: absolute;
+  top: calc(50% - 30vh/2);
+  left: calc(50% - 40vw/2);
+  height: 50vh;
+  width: 40vw;
+  font-family: 'FuturaStdMedium';
+  font-size: 1vw;
+  line-height: 1.5vw;
+}
+
+.timeline .section4 .whitePart .description .list
+{
+  margin-left: 2vw;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+.timeline .section4 .whitePart .description .space
+{
+  margin-bottom: 2vh;
+}
+
+.timeline .section4 .redPart
+{
+  position: absolute;
+  top: 0;
+  left: 70vw;
+  height: 100vh;
+  width: 30vw;
+  background: #d53d3d;
+}
+
+.timeline .section4 img
+{
+  position: absolute;
+  top: calc(50vh - 80vh/2);
+  left: calc(68vw - 20vw/2);
+  height: 75vh;
+  width: 30vw;
+}
