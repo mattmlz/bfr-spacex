@@ -742,6 +742,14 @@ header.header .xLogo
   vertical-align: center;
 }
 
+.timeline .section.section3 .flightInformations .informations
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .timeline .section.section3 .flightInformations .text 
 {
   font-family: 'FuturaStdBold';
