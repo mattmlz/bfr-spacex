@@ -7,17 +7,22 @@
 body
 {
   background:#F1F1F1;
-  overflow: hidden;
 }
 body button
 {
  cursor: pointer;
 }
 
+.timeline
+{
+/*  overflow: hidden;*/
+}
+
 .timeline .section
 {
   width: 100vw;
   height: 100vh;
+  overflow: hidden
 }
 
 .timeline .section.verticalSection
@@ -27,7 +32,7 @@ body button
   left: 100%;
 }
 
-.timeline .section.section1 { top: 0; overflow: hidden; }
+.timeline .section.section1 { top: 0; }
 .timeline .section.section2 { top: 100%;}
 .timeline .section.section3 { top: 200%; }
 .timeline .section.section4 { top: 300%; }
@@ -53,7 +58,7 @@ body button
 {
   position: absolute;
   top: calc(50vh - 30vh/2);
-  left: 1vw;
+  left: calc(5vw - 10vw/2);
   height: 30vh;
   width: 10vw;
   color: #f1f1f1;
@@ -102,16 +107,34 @@ body button
   z-index: 100;
 }
 
-.timeline .section .indications
+.timeline .section .scrollStep
 {
   position: absolute;
   bottom: 10vh;
   left: calc(50vw - 15vw/2);
-  height: 5vh;
+  height: 15vh;
   width: 15vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  will-change: opacity;
+  z-index: 99;
+}
+
+.timeline .section .scrollStep.appear
+{
+  transition: opacity 1s ease 1s;
+  opacity: 1;
+}
+
+.timeline .section .stepsFont
+{
+  font-family: 'MontserratExtraBold';
+  font-size: 0.8vw;
+  text-transform: uppercase;
+  margin-bottom: 1vh;
 }
 
 .timeline .section .step .circle
@@ -134,17 +157,31 @@ body button
   width: 0.9vh;
 }
 
+.timeline .section .verticalLine
+{
+  position: absolute;
+  left: 49.9%;
+  width: 2%;
+  height: 0.1%;
+  border-left-width: 0.1rem;
+  border-style: solid;
+  transform-origin: 0 0;
+  will-change: transform;
+  z-index: 98;
+}
+
+
 /************************
 
-     Header
+    Section0
 
 **************************/
 
-header.header
+.timeline .section0 .header
 {
-  position: fixed;
-  top: 2%;
-  left: 50%;
+  position: absolute;
+  top: 4%;
+  left: 65%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -155,28 +192,20 @@ header.header
   z-index: 99;
 }
 
-header.header .spaceLogo
+.timeline .section0 .header .spaceLogo
 {
   margin-right: 5px;
 }
 
-header.header .xLogo
+.timeline .section0 .header .xLogo
 {
   color: #5a8de2;
 }
 
-
-
-/************************
-
-    Section0
-
-**************************/
-
 .timeline .section0 .title
 {
   position: absolute;
-  top: 10%;
+  top: 13%;
   left: 34%;
   width: 60vw;
   justify-content: flex-start;
@@ -184,8 +213,8 @@ header.header .xLogo
   align-items: flex-start;
   text-transform: uppercase;
   font-family: 'FuturaStdBold';
-  font-size: 4rem;
-  line-height: 5rem;
+  font-size: 3.5vw;
+  line-height: 4vw;
   color: #5a8de2;
   z-index: 99;
 }
@@ -198,34 +227,37 @@ header.header .xLogo
 .timeline .section0 .crossCorner
 {
   position: absolute;
-  width: 5%;
-  height: 5%;
+  width: 3vw;
+  height: 5vh;
   font-family: 'FuturaStdMedium';
-  font-size: 3rem;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #f1f1f1;
   z-index: 99;
 }
 
 .timeline .section0 .crossCorner.topLeftCorner
 {
-  top: 5%;
-  left: 3%;
+  top: calc(6vh - 5vh/2);
+  left: calc(5vw - 3vw/2);
 }
 .timeline .section0 .crossCorner.botLeftCorner
 {
-  bottom: 5%;
-  left: 3%;
+  bottom: calc(6vh - 5vh/2);
+  left: calc(5vw - 3vw/2);
 }
 .timeline .section0 .crossCorner.topRightCorner
 {
-  top: 5%;
-  right: 3%;
+  top: calc(6vh - 5vh/2);
+  right: calc(5vw - 3vw/2);
   color: #000;
 }
 .timeline .section0 .crossCorner.botRightCorner
 {
-  bottom: 5%;
-  right: 3%;
+  bottom: calc(6vh - 5vh/2);
+  right: calc(5vw - 3vw/2);
 }
 
 .timeline .section0 .leftSide
@@ -268,39 +300,40 @@ header.header .xLogo
   top: 70%;
   left: 2%;
   font-family: 'FuturaStdHeavy';
-  font-size: 1.5rem;
+  font-size: 1.25vw;
 }
 
 .timeline .section0 .rightSide .whitePart .description
 {
   position: absolute;
-  top: 80%;
+  top: 83%;
   left: calc(50% - 20vw/2);
   width: 20vw;
   text-align: center;
   font-family: 'FuturaStdMedium';
-  font-size: 0.9rem;
+  font-size: 0.9vw;
 }
 
 .timeline .section0 .rightSide .whitePart .bfrVertical
 {
   position: absolute;
   top: 50%;
-  right: 10%;
+  right: calc(5vw - 2vw/2);
   height: 20vh;
+  width: 2vw;
 }
 
 .timeline .section0 .rightSide button.start
 {
   position: absolute;
-  top: calc(67vh - 8vh/2);
-  left: calc(50% - 16vw/2);
-  height: 8vh;
-  width: 16vw;
+  top: calc(67vh - 7vh/2);
+  left: calc(50% - 14vw/2);
+  height: 7vh;
+  width: 14vw;
   background: #5a8de2;
   border: 0;
-  font-family: 'Asimov';
-  font-size: 1rem;
+  font-family: 'MontserratBold';
+  font-size: 0.8vw;
   text-transform: uppercase;
   color: #f1f1f1;
   z-index: 99;
@@ -316,8 +349,8 @@ header.header .xLogo
 .timeline .section0 .rightSide button.start .btnCorner
 {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 1vw;
+  height: 1vw;
   border-style: solid;
 }
 
@@ -325,16 +358,16 @@ header.header .xLogo
 {
   top: 0;
   left: 0;
-  border-top-width: 0.3rem;
-  border-left-width: 0.3rem;
+  border-top-width: 0.3vw;
+  border-left-width: 0.3vw;
   border-color: #000;
 }
 .timeline .section0 .rightSide button.start .btnCorner.whiteCorner
 {
   bottom: 0;
   right: 0;
-  border-right-width: 0.3rem;
-  border-bottom-width: 0.3rem;
+  border-right-width: 0.3vw;
+  border-bottom-width: 0.3vw;
   border-color: #f1f1f1;
 }
 
@@ -363,9 +396,9 @@ header.header .xLogo
 .timeline .section0 .rightSide .blackPart .city p
 {
   font-family: 'MontserratBold';
-  font-size: 0.9rem;
+  font-size: 0.75vw;
   color: #f1f1f1;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.2vw;
 }
 
 .timeline .section0 .rightSide .blackPart .city.newyork
@@ -419,20 +452,20 @@ header.header .xLogo
   height: 10%;
   width: 10%;
   font-family: 'MontserratBold';
-  font-size: 0.8rem;
+  font-size: 0.8vw;
   color: #f1f1f1;
 }
 
 .timeline .section0 .rightSide .blackPart .follow
 {
   position: absolute;
-  bottom: 7%;
-  left: 1%;
+  bottom: 9%;
+  left: 2%;
   height: 8%;
-  width: 10%;
+  width: 8%;
   border: solid 0.1rem #f1f1f1;
   font-family: 'MontserratBold';
-  font-size: 0.6rem;
+  font-size: 0.5vw;
   text-transform: uppercase;
   color: #f1f1f1;
   background: #000;
@@ -633,6 +666,20 @@ header.header .xLogo
     Section2
 
 **************************/
+.timeline .section2 .verticalLine
+{
+  border-color: #000;
+}
+.timeline .section2 .verticalLine.topLine
+{
+  top: 0;
+}
+
+.timeline .section2 .topLine.grow
+{
+  transition: transform 1.5s ease;
+  transform: scaleY(175);
+}
 
 .timeline .section2 .txt
 {
@@ -659,7 +706,7 @@ header.header .xLogo
 
 .timeline .section2 .txt .title p+p 
 {
-  margin-left: 7vw;
+  margin-left: 13vw;
 }
 
 .timeline .section2 .txt .description
@@ -674,22 +721,26 @@ header.header .xLogo
   color: #000;
 }
 
-/*
-.timeline .section2 .indications
+.timeline .section2 .step .circle
 {
-  position: absolute;
-  bottom: 10vh;
-  left: calc(50vw - 15vw/2);
-  height: 5vh;
-  width: 15vw;
-  font-family: 'MontserratExtraBold';
-  font-size: 0.8vw;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-color: #000;
 }
-*/
+
+.timeline .section2 .step .dot
+{
+  background: #dbb7a0;
+}
+
+.timeline .section2 .verticalLine.botLine
+{
+  bottom: 16vh;
+}
+
+.timeline .section2 .verticalLine.botLine.grow
+{
+  transition: transform 1.5s ease 1s;
+  transform: scaleY(170)
+}
 
 /************************
 
@@ -808,6 +859,21 @@ header.header .xLogo
 
 **************************/
 
+.timeline .section4 .verticalLine
+{
+  border-color: #000;
+}
+.timeline .section4 .verticalLine.topLine
+{
+  top: 0;
+}
+
+.timeline .section4 .topLine.grow
+{
+  transition: transform 1.5s ease;
+  transform: scaleY(175);
+}
+
 .timeline .section4 .whitePart
 {
   position: absolute;
@@ -868,4 +934,25 @@ header.header .xLogo
   left: calc(68vw - 20vw/2);
   height: 75vh;
   width: 30vw;
+}
+
+.timeline .section4 .step .circle
+{
+  border-color: #000;
+}
+
+.timeline .section4 .step .dot
+{
+  background: #dbb7a0;
+}
+
+.timeline .section4 .verticalLine.botLine
+{
+  bottom: 16vh;
+}
+
+.timeline .section4 .verticalLine.botLine.grow
+{
+  transition: transform 1.5s ease 1s;
+  transform: scaleY(170)
 }

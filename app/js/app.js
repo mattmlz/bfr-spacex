@@ -4,6 +4,12 @@ const $sections = $timeline.querySelectorAll('.section')
 const $start = $sections[0].querySelector('.start')
 const $shanghai = $sections[0].querySelector('.shanghai')
 const $s0line = $sections[0].querySelector('.line')
+const $s2topline = $sections[2].querySelector('.topLine')
+const $s2botline = $sections[2].querySelector('.botLine')
+const $s2indications = $sections[2].querySelector('.scrollStep')
+const $s4topline = $sections[4].querySelector('.topLine')
+const $s4botline = $sections[4].querySelector('.botLine')
+const $s4indications = $sections[4].querySelector('.scrollStep')
 
 /******************
 
@@ -11,7 +17,8 @@ const $s0line = $sections[0].querySelector('.line')
   
 ******************/
 
-const scrollItHorizontal = (element) => {
+const scrollItHorizontal = (element) => 
+{
   document.body.scrollTo({
     'behavior': 'smooth',
     'left': element.offsetLeft,
@@ -19,7 +26,8 @@ const scrollItHorizontal = (element) => {
   })
 }
 
-const scrollItVertical = (element) => {
+const scrollItVertical = (element) => 
+{
   document.body.scrollTo({
     'behavior': 'smooth',
     'left': element.offsetLeft,
@@ -27,7 +35,8 @@ const scrollItVertical = (element) => {
   })
 }
 
-const scrollablePage = () => {
+const scrollablePage = () => 
+{
   if ($timeline.classList.contains('scrollable')) {
     onepagescroll('.timeline', {
       //child elements selector. use if you don't want to use section for page.
@@ -50,8 +59,12 @@ const scrollablePage = () => {
   }
 }
 
+/******************
+Actual time functions
+******************/
 //calcul of actual time
-const actualTime = () => {
+const actualTime = () => 
+{
   date = new Date
   hours = date.getHours()
   if (hours < 10) {
@@ -99,19 +112,54 @@ const actualTime3 = () => {
   return true;
 }
 actualTime3()
+
+/******************
+       Line
+******************/
+const lineGrowth = (pos) =>
+{
+  if(pos == 'translate3d(0px, 0%, 0px)' || pos == '')
+  {
+    $s2topline.classList.add('grow')
+    $s2indications.classList.add('appear')
+    $s2botline.classList.add('grow')
+  }
+  else if(pos == 'translate3d(0px, -100%, 0px)')
+  {
+    //animations section3
+  }
+  else if(pos == 'translate3d(0px, -200%, 0px)')
+  {
+    $s4topline.classList.add('grow')
+    $s4indications.classList.add('appear')
+    $s4botline.classList.add('grow')
+  }
+  else if(pos == 'translate3d(0px, -300%, 0px)')
+  {
+    //animations section5
+  }
+}
+
 /******************
 
-  Events
+     Events
   
 ******************/
 
-$start.addEventListener('click', () => {
+$start.addEventListener('click', () => 
+{
   $timeline.classList.add('scrollable')
   scrollablePage()
   $start.classList.add('close')
   $shanghai.classList.add('disappear')
   $s0line.classList.add('grow')
-  setTimeout(scrollItHorizontal, 3500, $sections[1])
+  setTimeout(scrollItHorizontal, 3500, $sections[1]) //good version
+//  scrollItHorizontal($sections[1]) //dev version
+})
+
+document.addEventListener('mousewheel', (event) =>
+{
+  setTimeout(lineGrowth, 500, $timeline.style.transform) 
 })
 
 /******************
