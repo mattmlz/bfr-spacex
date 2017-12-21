@@ -715,7 +715,7 @@ header.header .xLogo
   transform: translateX(-50%) translateY(-50%) scale(1.6, 1.6);
 }
 
-.timeline .section.section3 .whitePart .stepTitle .stepNumber .number
+.timeline .section.section3 .stepTitle .stepNumber .number
 {
   color: #deb9a1;
 }
@@ -723,6 +723,35 @@ header.header .xLogo
 .timeline .section.section3 .stepsFont
 {
   color: #FFFFFF;
+}
+
+.timeline .section.section3 .flightInformations 
+{
+  width: 100vw;
+  height: 30%;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  z-index: 100;
+  color: #FFFFFF;
+}
+
+.timeline .section.section3 .flightInformations .text 
+{
+  font-family: 'FuturaStdBold';
+  font-size: 1.2vw;
+}
+
+.timeline .section.section3 .flightInformations .count 
+{
+  font-family: 'FuturaStdBold';
+  font-size: 5vw;
+}
+
+.timeline .section.section3 .flightInformations .round .unit 
+{
+  font-family: 'MontserratBold';
+  font-size: 1.2vw;
 }
 
 /************************
