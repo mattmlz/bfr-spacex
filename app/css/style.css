@@ -408,7 +408,7 @@ body button
 
 .timeline .section0 .rightSide button.start:hover 
 {
-  transition: color 0.3s ease;
+  transition: 0.3s linear;
   color: #000;
 }
 
@@ -466,7 +466,7 @@ body button
 
 .timeline .section0 .rightSide .blackPart .city.shanghai.disappear
 {
-  transition: opacity 1s ease 1s;
+  transition: opacity 1s ease 0.5s;
   opacity: 0;
 }
 
@@ -487,7 +487,7 @@ body button
 
 .timeline .section0 .rightSide .blackPart .line.grow
 {
-  transition: transform 1.5s ease 2s;
+  transition: transform 1s ease-in 1.5s;
   transform: scaleX(1.5);
 }
 
@@ -977,6 +977,135 @@ body button
   height: 100vh;
   width: 30vw;
   background: #d53d3d;
+}
+
+.timeline .section4 .redPart .rocketLegend
+{
+  position: absolute;
+  height: 15vh;
+  width: 15vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  will-change: opacity;
+  z-index: 99;
+}
+
+.timeline .section4 .redPart .rocketLegend.appear
+{
+  transition: opacity 1s ease 1s;
+  opacity: 1;
+}
+
+.timeline .section4 .redPart .rocketLegend.rocketLegend1
+{
+  top: 5vh;
+  left: calc(50% - 15vw/2);
+}
+
+.timeline .section4 .redPart .rocketLegend.rocketLegend2
+{
+  bottom: 10vh;
+  left: -11vw;
+}
+
+.timeline .section4 .redPart .rocketLegend .dot
+{
+  background: #000;
+}
+
+.timeline .section4 .redPart .rocketLegend.rocketLegend1 .circle
+{
+  margin-right: 1vw;
+}
+
+.timeline .section4 .redPart .rocketLegend.rocketLegend1 p
+{
+  color: #f1f1f1;
+}
+
+.timeline .section4 .redPart .rocketLegend.rocketLegend2 .circle
+{
+  margin-left: 1vw;
+}
+
+.timeline .section4 .redPart .legendLine1
+{
+  position: absolute;
+  left: -3vw;
+  border-style: solid;
+  border-color: #000;
+  will-change: transform;
+}
+
+.timeline .section4 .redPart .legendLine1_vertical
+{
+  top: 19.5vh;
+  height: 0.1vh;
+  width: 15vw;
+  border-left-width: 0.1rem;
+  transform-origin: 0 100%;
+}
+
+.timeline .section4 .redPart .legendLine1_vertical.grow
+{
+  transition: transform 0.5s linear 0.5s;
+  transform: scaleY(65);
+}
+
+.timeline .section4 .redPart .legendLine1_horizontal
+{
+  top: 12.5vh;
+  height: 7vh;
+  width: 0.1vw;
+  border-top-width: 0.1rem;
+  transform-origin: 0 0;
+}
+
+.timeline .section4 .redPart .legendLine1_horizontal.grow
+{
+  transition: transform 0.5s linear 1s;
+  transform: scaleX(145);
+}
+
+.timeline .section4 .redPart .legendLine2
+{
+  position: absolute;
+  right: 20vw;
+  border-style: solid;
+  border-color: #000;
+}
+
+.timeline .section4 .redPart .legendLine2_vertical
+{
+  bottom: 23.8vh;
+  height: 0.1vh;
+  width: 10.5vw;
+  border-right-width: 0.1rem;
+  transform-origin: 100% 0;
+}
+
+.timeline .section4 .redPart .legendLine2_vertical.grow
+{
+  transition: transform 0.5s linear 0.5s;
+  transform: scaleY(62);
+}
+
+.timeline .section4 .redPart .legendLine2_horizontal
+{
+  bottom: 17.4vh;
+  height: 6.5vh;
+  width: 0.1vw;
+  border-bottom-width: 0.1rem;
+  transform-origin: 0 100%;
+}
+
+.timeline .section4 .redPart .legendLine2_horizontal.grow
+{
+  transition: transform 0.5s linear 1s;
+  transform: scaleX(-105);
 }
 
 .timeline .section4 img
