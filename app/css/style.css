@@ -750,6 +750,12 @@ header.header .xLogo
   justify-content: center;
 }
 
+.timeline .section.section3 .flightInformations .informations .count,
+.timeline .section.section3 .flightInformations .informations .round
+{
+  margin: 5px;
+}
+
 .timeline .section.section3 .flightInformations .text 
 {
   font-family: 'FuturaStdBold';
