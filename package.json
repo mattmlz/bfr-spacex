@@ -32,6 +32,8 @@
     "run-sequence": "^2.2.0"
   },
   "dependencies": {
-    "gulp-minify-css": "^1.2.4"
+    "gulp-minify-css": "^1.2.4",
+    "moment": "^2.20.1",
+    "moment-timezone": "^0.5.14"
   }
 }
