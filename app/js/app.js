@@ -64,104 +64,38 @@ const scrollablePage = () =>
 Actual time functions
 ******************/
 //calcul of actual time
+moment().format('fr');
+ 
 const actualTime = () => 
 {
   date = new Date
-  hours = date.getHours()
-  if (hours < 10) {
-    hours = "0" + hours
-  }
-
-  mins = date.getMinutes()
-  if (mins < 10) {
-    mins = "0" + mins
-  }
-
-  secs = date.getSeconds()
-  if (secs < 10) {
-    secs = "0" + secs
-  }
-
-  result = +hours + ':' + mins + ':' + secs
-  document.querySelector('.actualTime1').innerHTML = result;
-  setTimeout('actualTime();', '1000');
-  return true;
+  document.querySelector('.actualTime1').innerHTML = moment(date).tz('America/New_York').format('LTS'); 
+  setTimeout('actualTime();', '1000')
 }
 actualTime()
-
+ 
 //calcul of time +3 mins
 const actualTime3 = () => {
   date = new Date
-  hours = date.getHours()
-  if (hours < 10) {
-    hours = "0" + hours
-  }
-
-  mins = date.getMinutes() + 3
-  if (mins < 10) {
-    mins = "0" + mins
-  }
-
-  secs = date.getSeconds()
-  if (secs < 10) {
-    secs = "0" + secs
-  }
-
-  result = +hours + ':' + mins + ':' + secs
-  document.querySelector('.actualTime3').innerHTML = result;
+  document.querySelector('.actualTime3').innerHTML = moment(date).tz('America/New_York').add(3, 'minutes').format('LTS')
   setTimeout('actualTime3();', '1000');
-  return true;
 }
 actualTime3()
-
+ 
 //calcul of time +30 mins
 const actualTime5 = () => {
   date = new Date
-  hours = date.getHours()
-  if (hours < 10) {
-    hours = "0" + hours
-  }
-
-  mins = date.getMinutes() + 30
-  if (mins < 10) {
-    mins = "0" + mins
-  }
-
-  secs = date.getSeconds()
-  if (secs < 10) {
-    secs = "0" + secs
-  }
-
-  result = +hours + ':' + mins + ':' + secs
-  document.querySelector('.actualTime5').innerHTML = result;
-  document.querySelector('.arrivalTimeBfr').innerHTML = result;
+  document.querySelector('.actualTime5').innerHTML = moment(date).tz('America/New_York').add(30, 'minutes').format('LTS')
+  document.querySelector('.arrivalTimeBfr').innerHTML = moment(date).tz('Asia/Shanghai').add(30, 'minutes').format('LTS')
   setTimeout('actualTime5();', '1000');
-  return true;
 }
 actualTime5()
-
+ 
 //calcul of flight time with plane
 const actualTimePlane = () => {
   date = new Date
-  hours = date.getHours() + 15
-  if (hours < 10) {
-    hours = "0" + hours
-  }
-
-  mins = date.getMinutes()
-  if (mins < 10) {
-    mins = "0" + mins
-  }
-
-  secs = date.getSeconds()
-  if (secs < 10) {
-    secs = "0" + secs
-  }
-
-  result = +hours + ':' + mins + ':' + secs
-  document.querySelector('.arrivalTimePlane').innerHTML = result;
+  document.querySelector('.arrivalTimePlane').innerHTML = moment(date).tz('Asia/Shanghai').add(15, 'hours').format('LTS')
   setTimeout('actualTimePlane();', '1000');
-  return true;
 }
 actualTimePlane()
 
