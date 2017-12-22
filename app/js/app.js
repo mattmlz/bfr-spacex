@@ -266,8 +266,8 @@ $start.addEventListener('click', () =>
   $start.classList.add('close')
   $shanghai.classList.add('disappear')
   $s0line.classList.add('grow')
-//  setTimeout(scrollItHorizontal, 2500, $sections[1]) //good version
-  scrollItHorizontal($sections[1]) //dev version
+  setTimeout(scrollItHorizontal, 2500, $sections[1]) //good version
+//  scrollItHorizontal($sections[1]) //dev version
   setTimeout(firstPageEvents, 2500)
 })
 
