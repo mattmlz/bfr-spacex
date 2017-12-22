@@ -1,6 +1,7 @@
 # SpaceX
 -----------------------
 *Realised by Team 16 @ HETIC*
+*Web developpement by Milan Roustan & Matthieu TOUSSAINT*
 *Version 1.0.0*
 
 ## Synopsis
@@ -8,7 +9,7 @@ The Big Falcon Rocket is an incredible invention. We wanted to put it forward du
 
 ## Running
  - Click [here](http://matthieutoussaint.fr)
- - Download the .zip, unzip it and double click on index.html file
+ - Download the .zip, unzip it, go on app folder and double click on index.html file
 
 ## Features:
  - Gulp used to build and deploy the projet
