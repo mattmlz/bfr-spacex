@@ -736,6 +736,7 @@ body button
 {
   border-color: #000;
 }
+
 .timeline .section2 .verticalLine.topLine
 {
   top: 0;
@@ -1141,6 +1142,19 @@ body button
     Section5
 
 **************************/
+
+.timeline .section5 .verticalLine.topLine
+{
+  top: 0;
+  border-color: #f1f1f1;
+}
+
+.timeline .section5 .verticalLine.topLine.grow
+{
+  transition: transform 1.5s ease;
+  transform: scaleY(175);
+}
+
 .timeline .section.section5 .stepTitle {
   color: #FFFFFF;
 }
