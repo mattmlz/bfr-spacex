@@ -827,7 +827,7 @@ body button
   left: -1vh;
 }
 
-.timeline .section.section3 .stepTitle .stepNumber .number
+.timeline .section.section3 .stepTitle .stepNumber .number, .timeline .section3 .stepTitle .titleName.letterShadow
 {
   color: #deb9a1;
 }
@@ -1168,7 +1168,7 @@ body button
   color: #f1f1f1;
 }
 
-.timeline .section.section5 .stepTitle .stepNumber .number
+.timeline .section.section5 .stepTitle .stepNumber .number, .timeline .section.section5 .stepTitle .letterShadow
 {
   color: #ddb172;
 }
@@ -1185,10 +1185,11 @@ body button
   align-items: flex-start;
   justify-content: flex-start;
   font-family: 'FuturaStdBold';
-  font-size: 3vw;
+  font-size: 3.5vw;
   text-transform: uppercase;
+  margin-top: -2.5vw;
 }
-
+  
 .timeline .section.section5 .doubleTitleName .secondLine 
 {
   margin-left: 100px;
