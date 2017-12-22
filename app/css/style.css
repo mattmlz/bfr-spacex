@@ -96,6 +96,7 @@ body button
   height: 2vh;
   width: 0.1vw;
   margin-top: 0.8vh;
+  margin-right: 0.1vw;
   border-style: solid;
   border-color: #000;
   border-bottom-width: 0.05vw;
@@ -105,7 +106,7 @@ body button
 
 .timeline .section .stepTitle .stepNumber .number .stepLine.grow
 {
-  transition: transform 0.5s ease 1s;
+  transition: transform 0.5s ease;
   transform: scaleX(20);
 }
 
@@ -736,6 +737,7 @@ body button
 {
   border-color: #000;
 }
+
 .timeline .section2 .verticalLine.topLine
 {
   top: 0;
@@ -1141,13 +1143,31 @@ body button
     Section5
 
 **************************/
+
+.timeline .section5 .verticalLine.topLine
+{
+  top: 0;
+  border-color: #f1f1f1;
+}
+
+.timeline .section5 .verticalLine.topLine.grow
+{
+  transition: transform 1.5s ease;
+  transform: scaleY(175);
+}
+
 .timeline .section.section5 .stepTitle {
-  color: #FFFFFF;
+  color: #f1f1f1;
 }
 
 .timeline .section.section5 .stepTitle .stepNumber .number
 {
-  color: #ddb172
+  color: #ddb172;
+}
+
+.timeline .section.section5 .stepTitle .stepNumber .number .stepLine
+{
+  border-color: #f1f1f1;
 }
 
 .timeline .section.section5 .doubleTitleName 

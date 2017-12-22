@@ -1,6 +1,7 @@
 // Variables
 const $timeline = document.querySelector('.timeline')
 const $sections = $timeline.querySelectorAll('.section')
+const $videos = $timeline.querySelectorAll('video')
 const $start = $sections[0].querySelector('.start')
 const $shanghai = $sections[0].querySelector('.shanghai')
 const $s0line = $sections[0].querySelector('.line')
@@ -19,7 +20,8 @@ const $s4legendLine1_horizontal = $sections[4].querySelector('.legendLine1_horiz
 const $s4legendLine2_vertical = $sections[4].querySelector('.legendLine2_vertical')
 const $s4legendLine2_horizontal = $sections[4].querySelector('.legendLine2_horizontal')
 const $s4scrollStep = $sections[4].querySelector('.scrollStep')
-const $videos = $timeline.querySelectorAll('video')
+const $s5topline = $sections[5].querySelector('.topLine')
+const $s5stepLine = $sections[5].querySelector('.stepLine')
 
 /******************
 
@@ -150,6 +152,8 @@ const scrollEvents = (pos) =>
   else if(pos == 'translate3d(0px, -300%, 0px)')
   {
     $videos[2].play()
+    $s5topline.classList.add('grow')
+    $s5stepLine.classList.add('grow')
   }
 }
 
@@ -166,8 +170,8 @@ $start.addEventListener('click', () =>
   $start.classList.add('close')
   $shanghai.classList.add('disappear')
   $s0line.classList.add('grow')
-  setTimeout(scrollItHorizontal, 2500, $sections[1]) //good version
-//  scrollItHorizontal($sections[1]) //dev version
+//  setTimeout(scrollItHorizontal, 2500, $sections[1]) //good version
+  scrollItHorizontal($sections[1]) //dev version
   setTimeout(firstPageEvents, 2500)
 })
 
