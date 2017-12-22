@@ -12,6 +12,10 @@ const $s1botline = $sections[1].querySelector('.botLine')
 const $s2topline = $sections[2].querySelector('.topLine')
 const $s2botline = $sections[2].querySelector('.botLine')
 const $s2scrollStep = $sections[2].querySelector('.scrollStep')
+const $s3stepLine = $sections[3].querySelector('.stepLine')
+const $s3topline = $sections[3].querySelector('.topLine')
+const $s3scrollStep = $sections[3].querySelector('.scrollStep')
+const $s3botline = $sections[3].querySelector('.botLine')
 const $s4topline = $sections[4].querySelector('.topLine')
 const $s4botline = $sections[4].querySelector('.botLine')
 const $s4stepLine = $sections[4].querySelector('.stepLine')
@@ -225,6 +229,10 @@ const scrollEvents = (pos) =>
   {
     $videos[1].play()
     launchIntervals()
+    $s3topline.classList.add('grow')
+    $s3stepLine.classList.add('grow')
+    $s3scrollStep.classList.add('appear')
+    $s3botline.classList.add('grow')
   }
   else if(pos == 'translate3d(0px, -200%, 0px)')
   {

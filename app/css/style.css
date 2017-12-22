@@ -816,16 +816,18 @@ body button
 
 **************************/
 
-.timeline .section.section3 {
-  overflow: hidden;
+.timeline .section3 .verticalLine.topLine
+{
+  top: 0;
+  border-color: #f1f1f1;
 }
 
-.timeline .section.section3 .stepTitle .stepNumber 
+.timeline .section3 .topLine.grow
 {
-  position: relative;
-  top: -5vh;
-  left: -1vh;
+  transition: transform 1.5s ease;
+  transform: scaleY(175);
 }
+
 
 .timeline .section.section3 .stepTitle .stepNumber .number, .timeline .section3 .stepTitle .titleName.letterShadow
 {
@@ -900,6 +902,23 @@ body button
   position: absolute;
   top: -1.8vh;
   left: -1vw;
+}
+
+.timeline .section3 .step .dot
+{
+  background: #d53d3d;
+}
+
+.timeline .section3 .verticalLine.botLine
+{
+  bottom: 16vh;
+  border-color: #f1f1f1;
+}
+
+.timeline .section3 .verticalLine.botLine.grow
+{
+  transition: transform 1.5s ease 1s;
+  transform: scaleY(170)
 }
 
 /************************
