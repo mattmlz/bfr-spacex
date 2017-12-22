@@ -224,6 +224,7 @@ const scrollEvents = (pos) =>
   else if(pos == 'translate3d(0px, -100%, 0px)')
   {
     $videos[1].play()
+    launchIntervals()
   }
   else if(pos == 'translate3d(0px, -200%, 0px)')
   {
@@ -235,7 +236,6 @@ const scrollEvents = (pos) =>
     $s4legendLine2_horizontal.classList.add('grow')
     $s4scrollStep.classList.add('appear')
     $s4botline.classList.add('grow')
-    launchIntervals()
   }
   else if(pos == 'translate3d(0px, -300%, 0px)')
   {
@@ -258,8 +258,8 @@ $start.addEventListener('click', () =>
   $start.classList.add('close')
   $shanghai.classList.add('disappear')
   $s0line.classList.add('grow')
-//  setTimeout(scrollItHorizontal, 2500, $sections[1]) //good version
-  scrollItHorizontal($sections[1]) //dev version
+  setTimeout(scrollItHorizontal, 2500, $sections[1]) //good version
+//  scrollItHorizontal($sections[1]) //dev version
   setTimeout(firstPageEvents, 2500)
 })
 
