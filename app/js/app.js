@@ -150,7 +150,7 @@ const launchTemperature = () => {
 }
 
 const launchAcceleration = () => {
-  if(accelerationDisplay <= 32 && acceleration <= 32) {
+  if(accelerationDisplay <= 3.3 && acceleration <= 32) {
     accelerationContext.clearRect(0, 0, 100, 100)
     accelerationContext.beginPath()
     accelerationContext.strokeStyle = 'white'
@@ -159,7 +159,7 @@ const launchAcceleration = () => {
     accelerationContext.stroke()
     $acceleration.querySelector('.count').innerHTML = accelerationDisplay.toFixed(2)
     acceleration += 1
-    accelerationDisplay += 1
+    accelerationDisplay += 0.1
   }
 }
 

@@ -844,7 +844,7 @@ body button
 .timeline .section.section3 .flightInformations .informations .round
 {
   width: 2.8vw;
-  margin: 20px;
+  margin: 70px;
 }
 .timeline .section.section3 .flightInformations .informations .round { position: relative; }
 
@@ -867,8 +867,8 @@ body button
   justify-content: center;
   font-family: 'MontserratBold';
   font-size: 1.1vw;
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 50px;
 }
@@ -876,8 +876,8 @@ body button
 .timeline .section.section3 .flightInformations .round canvas.fillRound
 {
   position: absolute;
-  top: -2vh;
-  left: -35%;
+  top: -1.8vh;
+  left: -1vw;
 }
 
 /************************
