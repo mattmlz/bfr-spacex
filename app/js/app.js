@@ -15,6 +15,7 @@ const $s4legendLine1_horizontal = $sections[4].querySelector('.legendLine1_horiz
 const $s4legendLine2_vertical = $sections[4].querySelector('.legendLine2_vertical')
 const $s4legendLine2_horizontal = $sections[4].querySelector('.legendLine2_horizontal')
 const $s4indications = $sections[4].querySelector('.scrollStep')
+const $videos = $timeline.querySelectorAll('video')
 
 /******************
 
@@ -103,10 +104,14 @@ const actualTimePlane = () => {
 }
 actualTimePlane()
 
-/******************
-       Line
-******************/
-const lineGrowth = (pos) =>
+
+const launchFirstVideo = () =>
+{
+  $videos[0].play()
+}
+
+// Events happening on scroll depending on the position on the page
+const scrollEvents = (pos) =>
 {
   if(pos == 'translate3d(0px, 0%, 0px)' || pos == '')
   {
@@ -116,7 +121,7 @@ const lineGrowth = (pos) =>
   }
   else if(pos == 'translate3d(0px, -100%, 0px)')
   {
-    //animations section3
+    $videos[1].play()
   }
   else if(pos == 'translate3d(0px, -200%, 0px)')
   {
@@ -131,7 +136,7 @@ const lineGrowth = (pos) =>
   }
   else if(pos == 'translate3d(0px, -300%, 0px)')
   {
-    //animations section5
+    $videos[2].play()
   }
 }
 
@@ -150,11 +155,12 @@ $start.addEventListener('click', () =>
   $s0line.classList.add('grow')
   setTimeout(scrollItHorizontal, 2500, $sections[1]) //good version
 //  scrollItHorizontal($sections[1]) //dev version
+  setTimeout(launchFirstVideo, 2500)
 })
 
 document.addEventListener('mousewheel', (event) =>
 {
-  setTimeout(lineGrowth, 500, $timeline.style.transform) 
+  setTimeout(scrollEvents, 500, $timeline.style.transform) 
 })
 
 /******************
