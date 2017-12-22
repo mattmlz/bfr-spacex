@@ -28,7 +28,23 @@ const $s5stepLine = $sections[5].querySelector('.stepLine')
   Functions
   
 ******************/
+//Test Resolution of user screen
+let userWidth = document.body.clientWidth
+let userHeight = document.body.clientHeight
 
+const resolution = () => {
+  let userWidth = document.body.clientWidth
+  let userHeight = document.body.clientHeight
+  if(userWidth < 1280 || userHeight < 800) {
+    $timeline.style.display = 'none'
+    alert('Your screen resolution is not adapted to the experience we want to offer you.')
+  }
+}
+resolution()
+
+intervalResolution = window.setInterval(resolution, 5000)
+
+//Scroll horizontal
 const scrollItHorizontal = (element) => 
 {
   document.body.scrollTo({
@@ -38,6 +54,7 @@ const scrollItHorizontal = (element) =>
   })
 }
 
+//scroll vertical
 const scrollItVertical = (element) => 
 {
   document.body.scrollTo({
@@ -47,6 +64,7 @@ const scrollItVertical = (element) =>
   })
 }
 
+//Make page scrollable
 const scrollablePage = () => 
 {
   if ($timeline.classList.contains('scrollable')) {
