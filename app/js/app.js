@@ -21,6 +21,7 @@ const $s4legendLine2_vertical = $sections[4].querySelector('.legendLine2_vertica
 const $s4legendLine2_horizontal = $sections[4].querySelector('.legendLine2_horizontal')
 const $s4scrollStep = $sections[4].querySelector('.scrollStep')
 const $s5topline = $sections[5].querySelector('.topLine')
+const $s5stepLine = $sections[5].querySelector('.stepLine')
 
 /******************
 
@@ -152,6 +153,7 @@ const scrollEvents = (pos) =>
   {
     $videos[2].play()
     $s5topline.classList.add('grow')
+    $s5stepLine.classList.add('grow')
   }
 }
 
