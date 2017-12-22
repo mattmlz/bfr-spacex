@@ -816,18 +816,20 @@ body button
 
 **************************/
 
-.timeline .section.section3 {
-  overflow: hidden;
-}
-
-.timeline .section.section3 .stepTitle .stepNumber 
+.timeline .section3 .verticalLine.topLine
 {
-  position: relative;
-  top: -5vh;
-  left: -1vh;
+  top: 0;
+  border-color: #f1f1f1;
 }
 
-.timeline .section.section3 .stepTitle .stepNumber .number
+.timeline .section3 .topLine.grow
+{
+  transition: transform 1.5s ease;
+  transform: scaleY(175);
+}
+
+
+.timeline .section.section3 .stepTitle .stepNumber .number, .timeline .section3 .stepTitle .titleName.letterShadow
 {
   color: #deb9a1;
 }
@@ -900,6 +902,23 @@ body button
   position: absolute;
   top: -1.8vh;
   left: -1vw;
+}
+
+.timeline .section3 .step .dot
+{
+  background: #d53d3d;
+}
+
+.timeline .section3 .verticalLine.botLine
+{
+  bottom: 16vh;
+  border-color: #f1f1f1;
+}
+
+.timeline .section3 .verticalLine.botLine.grow
+{
+  transition: transform 1.5s ease 1s;
+  transform: scaleY(170)
 }
 
 /************************
@@ -1168,7 +1187,7 @@ body button
   color: #f1f1f1;
 }
 
-.timeline .section.section5 .stepTitle .stepNumber .number
+.timeline .section.section5 .stepTitle .stepNumber .number, .timeline .section.section5 .stepTitle .letterShadow
 {
   color: #ddb172;
 }
@@ -1185,10 +1204,11 @@ body button
   align-items: flex-start;
   justify-content: flex-start;
   font-family: 'FuturaStdBold';
-  font-size: 3vw;
+  font-size: 3.5vw;
   text-transform: uppercase;
+  margin-top: -2.5vw;
 }
-
+  
 .timeline .section.section5 .doubleTitleName .secondLine 
 {
   margin-left: 100px;
