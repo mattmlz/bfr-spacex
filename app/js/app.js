@@ -292,3 +292,11 @@ document.addEventListener('mousewheel', (event) =>
 {
   setTimeout(scrollEvents, 500, $timeline.style.transform) 
 })
+
+document.addEventListener('keydown', (event) =>
+{
+  if(event.keyCode == 40)
+  {
+    setTimeout(scrollEvents, 500, $timeline.style.transform)
+  }
+})
