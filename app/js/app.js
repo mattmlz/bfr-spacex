@@ -39,8 +39,7 @@ let userHeight = document.body.clientHeight
 const resolution = () => {
   let userWidth = document.body.clientWidth
   let userHeight = document.body.clientHeight
-  if(userWidth < 1280 || userHeight < 800) {
-    $timeline.style.display = 'none'
+  if(userWidth < 960 || userHeight < 600) {
     alert('Your screen resolution is not adapted to the experience we want to offer you.')
   }
 }
