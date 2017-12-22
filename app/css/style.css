@@ -106,14 +106,14 @@ body button
 .timeline .section .stepTitle .stepNumber .number .stepLine.grow
 {
   transition: transform 0.5s ease 1s;
-  transform: scaleX(20)
+  transform: scaleX(20);
 }
 
 .timeline .section .stepTitle .titleName
 {
   font-size: 3.5vw;
   text-transform: uppercase;
-  margin-top: -2.3vw;
+  margin-top: -2.5vw;
 }
 
 .timeline .section .stepTitle .titleName.letterShadow
@@ -561,10 +561,6 @@ body button
 
 **************************/
 
-.timeline .section.section1 {
-  overflow: hidden;
-}
-
 .timeline .section.section1 .header2 
 {
   background: transparent;
@@ -601,6 +597,28 @@ body button
   justify-content: center;
 }
 
+
+.timeline .section1 .contentSection1 .stepTitle .stepNumber .number, .timeline .section1 .stepTitle .titleName.letterShadow
+{
+  color: #5a8de2;
+}
+
+.timeline .section1 .contentSection1 .stepTitle .titleName.titleTxt, .timeline .section1 .contentSection1 .stepTitle .stepNumber > p
+{
+  color: #f1f1f1;
+}
+
+.timeline .section1 .contentSection1 .stepTitle .stepNumber .stepLine
+{
+  border-color: #f1f1f1;
+}
+
+.timeline .section1 .stepTitle .stepNumber .number .stepLine.grow
+{
+  transition: transform 0.5s ease 0s;
+}
+
+
 .timeline .section.section1 .contentSection1 button.impendingDeparture 
 {
   position: absolute;
@@ -615,6 +633,17 @@ body button
   text-transform: uppercase;
   color: #000000;
   z-index: 2;
+  animation-name: warning;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  will-change: opacity;
+}
+
+@keyframes warning
+{
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 .timeline .section.section1 .contentSection1 .rightPart 
@@ -635,76 +664,67 @@ body button
   color: #FFFFFF;
 }
 
-.timeline .section.section1 .contentSection1 .stepsline
+.timeline .section1 .step.scrollStep.subStep1 { left: calc(5% - 15vw/2); }
+.timeline .section1 .step.scrollStep.subStep2 { left: calc(20% - 15vw/2); }
+
+.timeline .section1 .step.scrollStep.subStep1.appear
 {
-  position: absolute;
-  top: 67vh;
-  left: 0;
-  width: 100%;
-  height: 33vh;
-  z-index: 100;
+  transition: opacity 1s ease 0.1s;
+  opacity: 1;
 }
 
-.timeline .section.section1 .contentSection1 .stepsline .step
+.timeline .section1 .step.scrollStep.subStep2.appear
 {
-  position: absolute;
-  height: 30%;
-  width: 10%;
-  top: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  transition: opacity 1s ease 0.4s;
+  opacity: 1;
 }
 
-.timeline .section.section1 .contentSection1 .stepsline .step p
+.timeline .section1 .step.scrollStep .stepsFont
 {
-  font-family: 'MontserratBold';
-  font-size: 0.9rem;
   color: #f1f1f1;
-  margin-bottom: 1.25rem;
 }
 
-.timeline .section.section1 .contentSection1 .stepsline .step.boarding
+.timeline .section1 .step.scrollStep.subStep .dot
 {
-  left: calc(5% - 10%/2);
+  background: #f1f1f1;
 }
 
-.timeline .section.section1 .contentSection1 .stepsline .step.boarding .circle .dot
+.timeline .section1 .step.scrollStep.mainStep .dot
 {
   background: #5a8de2;
 }
 
-.timeline .section.section1 .contentSection1 .stepsline .step.takePlace
-{
-  left: calc(20% - 10%/2);
-}
-
-.timeline .section.section1 .contentSection1 .stepsline .step.discover
-{
-  left: calc(50% - 20%/2);
-}
-
-.timeline .section.section1 .contentSection1 .stepsline .line
+.timeline .section1 .leftLine
 {
   position: absolute;
-  top: 50%;
-  left: calc(50% - 50%/2);
-  height: 30%;
-  width: 50%;
-  border-top-width: 0.1rem;
-  border-color: #f1f1f1;
+  bottom: 16vh;
+  left: 0;
+  width: 0.1vw;
+  height: 2vh;
+  border-bottom-width: 0.1rem;
   border-style: solid;
-  display : flex;
-  justify-content: center;
-  align-items: center;
+  border-color: #f1f1f1;
+  transform-origin: 0 0;
+  will-change: transform;
+  z-index: 98;
 }
 
-.timeline .section.section1 .contentSection1 .stepsline .line p
+.timeline .section1 .leftLine.grow
 {
-  font-family: 'MontserratBold';
-  font-size: 0.8rem;
-  color: #f1f1f1;
+  transition: transform 1.5s ease;
+  transform: scaleX(480);
+}
+
+.timeline .section1 .verticalLine.botLine
+{
+  bottom: 16vh;
+  border-color: #f1f1f1;
+}
+
+.timeline .section1 .verticalLine.botLine.grow
+{
+  transition: transform 1.5s ease 1.5s;
+  transform: scaleY(170);
 }
 
 /************************
@@ -907,15 +927,16 @@ body button
   color: #000;
 }
 
-.timeline .section4 .whitePart .stepTitle .stepNumber .number
+.timeline .section4 .whitePart .stepTitle .stepNumber .number, .timeline .section4 .stepTitle .titleName.letterShadow
 {
   color: #d53d3d;
 }
 
-.timeline .section .stepTitle .titleName.letterShadow
+.timeline .section4 .whitePart .stepTitle .titleName.titleTxt
 {
-  color: #d53d3d;
+  margin-top: -2.3vw;
 }
+
 
 .timeline .section4 .whitePart .description
 {

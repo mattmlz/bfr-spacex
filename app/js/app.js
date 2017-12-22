@@ -4,9 +4,13 @@ const $sections = $timeline.querySelectorAll('.section')
 const $start = $sections[0].querySelector('.start')
 const $shanghai = $sections[0].querySelector('.shanghai')
 const $s0line = $sections[0].querySelector('.line')
+const $s1stepLine = $sections[1].querySelector('.stepLine')
+const $s1scrollSteps = $sections[1].querySelectorAll('.scrollStep')
+const $s1leftline = $sections[1].querySelector('.leftLine')
+const $s1botline = $sections[1].querySelector('.botLine')
 const $s2topline = $sections[2].querySelector('.topLine')
 const $s2botline = $sections[2].querySelector('.botLine')
-const $s2indications = $sections[2].querySelector('.scrollStep')
+const $s2scrollStep = $sections[2].querySelector('.scrollStep')
 const $s4topline = $sections[4].querySelector('.topLine')
 const $s4botline = $sections[4].querySelector('.botLine')
 const $s4stepLine = $sections[4].querySelector('.stepLine')
@@ -14,7 +18,7 @@ const $s4legendLine1_vertical = $sections[4].querySelector('.legendLine1_vertica
 const $s4legendLine1_horizontal = $sections[4].querySelector('.legendLine1_horizontal')
 const $s4legendLine2_vertical = $sections[4].querySelector('.legendLine2_vertical')
 const $s4legendLine2_horizontal = $sections[4].querySelector('.legendLine2_horizontal')
-const $s4indications = $sections[4].querySelector('.scrollStep')
+const $s4scrollStep = $sections[4].querySelector('.scrollStep')
 const $videos = $timeline.querySelectorAll('video')
 
 /******************
@@ -105,9 +109,18 @@ const actualTimePlane = () => {
 actualTimePlane()
 
 
-const launchFirstVideo = () =>
+const firstPageEvents = () =>
 {
   $videos[0].play()
+  $s1stepLine.classList.add('grow')
+  $s1leftline.classList.add('grow')
+  
+  for(let i=0; i < $s1scrollSteps.length; i++)
+  {
+    $s1scrollSteps[i].classList.add('appear')
+  }
+  
+  $s1botline.classList.add('grow')
 }
 
 // Events happening on scroll depending on the position on the page
@@ -116,7 +129,7 @@ const scrollEvents = (pos) =>
   if(pos == 'translate3d(0px, 0%, 0px)' || pos == '')
   {
     $s2topline.classList.add('grow')
-    $s2indications.classList.add('appear')
+    $s2scrollStep.classList.add('appear')
     $s2botline.classList.add('grow')
   }
   else if(pos == 'translate3d(0px, -100%, 0px)')
@@ -131,7 +144,7 @@ const scrollEvents = (pos) =>
     $s4legendLine1_horizontal.classList.add('grow')
     $s4legendLine2_vertical.classList.add('grow')
     $s4legendLine2_horizontal.classList.add('grow')
-    $s4indications.classList.add('appear')
+    $s4scrollStep.classList.add('appear')
     $s4botline.classList.add('grow')
   }
   else if(pos == 'translate3d(0px, -300%, 0px)')
@@ -155,7 +168,7 @@ $start.addEventListener('click', () =>
   $s0line.classList.add('grow')
   setTimeout(scrollItHorizontal, 2500, $sections[1]) //good version
 //  scrollItHorizontal($sections[1]) //dev version
-  setTimeout(launchFirstVideo, 2500)
+  setTimeout(firstPageEvents, 2500)
 })
 
 document.addEventListener('mousewheel', (event) =>
