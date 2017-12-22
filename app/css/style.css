@@ -798,6 +798,13 @@ body button
   overflow: hidden;
 }
 
+.timeline .section.section3 .stepTitle .stepNumber 
+{
+  position: relative;
+  top: -5vh;
+  left: -1vh;
+}
+
 .timeline .section.section3 .stepTitle .stepNumber .number
 {
   color: #deb9a1;
@@ -836,6 +843,7 @@ body button
 .timeline .section.section3 .flightInformations .informations .count,
 .timeline .section.section3 .flightInformations .informations .round
 {
+  width: 2.8vw;
   margin: 20px;
 }
 .timeline .section.section3 .flightInformations .informations .round { position: relative; }
@@ -848,7 +856,7 @@ body button
 
 .timeline .section.section3 .flightInformations .count 
 {
-  font-family: 'FuturaStdBold';
+  font-family: 'OpenSansBold';
   font-size: 3vw;
 }
 

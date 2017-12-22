@@ -110,6 +110,93 @@ const launchFirstVideo = () =>
   $videos[0].play()
 }
 
+//Launch animations on section3
+//Set variables
+const $temperature = document.querySelector('.temperature')
+const $acceleration = document.querySelector('.acceleration')
+const $speed = document.querySelector('.speed')
+const $altitude = document.querySelector('.altitude')
+const $temperatureCanvas = $temperature.querySelector('.fillRound')
+const $accelerationCanvas = $acceleration.querySelector('.fillRound')
+const $speedCanvas = $speed.querySelector('.fillRound')
+const $altitudeCanvas = $altitude.querySelector('.fillRound')
+let tempDisplay = 22
+let temperature = 0
+let accelerationDisplay = 0
+let acceleration = 0
+let speedDisplay = 0
+let speed = 0
+let altitudeDisplay = 0
+let altitude = 0
+
+//Get context of canvas
+const temperatureContext = $temperatureCanvas.getContext('2d')
+const accelerationContext = $accelerationCanvas.getContext('2d')
+const speedContext = $speedCanvas.getContext('2d')
+const altitudeContext = $altitudeCanvas.getContext('2d')
+
+const launchTemperature = () => {
+  if(tempDisplay >= -3 && temperature <= 26){
+    temperatureContext.clearRect(0, 0, 100, 100)
+    temperatureContext.beginPath()
+    temperatureContext.strokeStyle = 'white'
+    temperatureContext.lineWidth = 4
+    temperatureContext.arc(50, 50, 40, (((-2 * Math.PI) / 24) * temperature), false)
+    temperatureContext.stroke()
+    $temperature.querySelector('.count').innerHTML = Math.ceil(tempDisplay)
+    temperature += 0.7
+    tempDisplay -= 0.7
+  }
+}
+
+const launchAcceleration = () => {
+  if(accelerationDisplay <= 32 && acceleration <= 32) {
+    accelerationContext.clearRect(0, 0, 100, 100)
+    accelerationContext.beginPath()
+    accelerationContext.strokeStyle = 'white'
+    accelerationContext.lineWidth = 4
+    accelerationContext.arc(50, 50, 40, ((-2 * Math.PI) / 32) * acceleration, false)
+    accelerationContext.stroke()
+    $acceleration.querySelector('.count').innerHTML = accelerationDisplay.toFixed(2)
+    acceleration += 1
+    accelerationDisplay += 1
+  }
+}
+
+const launchSpeed = () => {
+  if(speedDisplay <= 22000 && speed <= 22000) {
+    speedContext.clearRect(0, 0, 100, 100)
+    speedContext.beginPath()
+    speedContext.strokeStyle = 'white'
+    speedContext.lineWidth = 4
+    speedContext.arc(50, 50, 40, ((-2 * Math.PI) / 22000) * speed, false)
+    speedContext.stroke()
+    $speed.querySelector('.count').innerHTML = speedDisplay
+    speed += 500
+    speedDisplay += 500
+  }
+}
+
+const launchAltitude = () => {
+  if(altitudeDisplay <= 8000 && altitude <= 8000) {
+    altitudeContext.clearRect(0, 0, 100, 100)
+    altitudeContext.beginPath()
+    altitudeContext.strokeStyle = 'white'
+    altitudeContext.lineWidth = 4
+    altitudeContext.arc(50, 50, 40, ((-2 * Math.PI) / 8000) * altitude, false)
+    altitudeContext.stroke()
+    $altitude.querySelector('.count').innerHTML = altitudeDisplay
+    altitude += 200
+    altitudeDisplay += 200
+  }
+}
+
+const launchIntervals = () => {
+  intervalTemperature = window.setInterval(launchTemperature, 1500)
+  intervalAcceleration = window.setInterval(launchAcceleration, 1500)
+  intervalSpeed = window.setInterval(launchSpeed, 1500)
+  intervalAltitude = window.setInterval(launchAltitude, 1500)
+}
 // Events happening on scroll depending on the position on the page
 const scrollEvents = (pos) =>
 {
@@ -133,6 +220,7 @@ const scrollEvents = (pos) =>
     $s4legendLine2_horizontal.classList.add('grow')
     $s4indications.classList.add('appear')
     $s4botline.classList.add('grow')
+    launchIntervals()
   }
   else if(pos == 'translate3d(0px, -300%, 0px)')
   {
@@ -162,59 +250,3 @@ document.addEventListener('mousewheel', (event) =>
 {
   setTimeout(scrollEvents, 500, $timeline.style.transform) 
 })
-
-/******************
-
-  Canvas
-  
-******************/
-
-//Section 1
-const $camembert = document.querySelector('.camembertCanvas')
-const camembertContext = $camembert.getContext('2d')
-
-camembertContext.fillStyle = 'white'
-camembertContext.strokeStyle = 'white'
-camembertContext.beginPath()
-camembertContext.arc(50, 50, 25, 0, 2 * Math.PI, false)
-camembertContext.stroke()
-
-//Section 3
-//Set variables
-const $temperature = document.querySelector('.temperature')
-const $acceleration = document.querySelector('.acceleration')
-const $speed = document.querySelector('.speed')
-const $altitude = document.querySelector('.altitude')
-const $temperatureCanvas = $temperature.querySelector('.fillRound')
-const $accelerationCanvas = $acceleration.querySelector('.fillRound')
-const $speedCanvas = $speed.querySelector('.fillRound')
-const $altitudeCanvas = $altitude.querySelector('.fillRound')
-//Get context of canvas
-const temperatureContext = $temperatureCanvas.getContext('2d')
-const accelerationContext = $accelerationCanvas.getContext('2d')
-const speedContext = $speedCanvas.getContext('2d')
-const altitudeContext = $altitudeCanvas.getContext('2d')
-//Round of temperature
-temperatureContext.beginPath()
-temperatureContext.strokeStyle = 'white'
-temperatureContext.lineWidth = 4
-temperatureContext.arc(50, 50, 40, 2 * Math.PI, false)
-temperatureContext.stroke()
-//Round of acceleration
-accelerationContext.beginPath()
-accelerationContext.strokeStyle = 'white'
-accelerationContext.lineWidth = 4
-accelerationContext.arc(50, 50, 40, 2 * Math.PI, false)
-accelerationContext.stroke()
-//Round of speed
-speedContext.beginPath()
-speedContext.strokeStyle = 'white'
-speedContext.lineWidth = 4
-speedContext.arc(50, 50, 40, 2 * Math.PI, false)
-speedContext.stroke()
-//Round of altitude
-altitudeContext.beginPath()
-altitudeContext.strokeStyle = 'white'
-altitudeContext.lineWidth = 4
-altitudeContext.arc(50, 50, 40, 2 * Math.PI, false)
-altitudeContext.stroke()
