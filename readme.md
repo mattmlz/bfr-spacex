@@ -8,7 +8,7 @@
 The Big Falcon Rocket is an incredible invention. We wanted to put it forward during this week intensive web development project.
 
 ## Running
- - Click [here](http://matthieutoussaint.fr)
+ - Click [here](http://lab.matthieutoussaint.fr/spacex/)
  - Download the .zip, unzip it, go on app folder and double click on index.html file
 
 ## Features:
